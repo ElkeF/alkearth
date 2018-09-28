@@ -1,0 +1,28 @@
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    ymin=0.0,
+    legend pos=outer north east,
+    ylabel={$\Gamma$ [meV]},
+    symbolic x coords={$d_{3/2}$,$d_{5/2}$},
+    xtick={$d_{3/2}$,$d_{5/2}$},
+    nodes near coords,
+    nodes near coords align={vertical},
+    enlarge x limits=0.55, %space left and right
+    axis line style = very thick,
+    tick style = very thick,
+    %width  = 0.85*\textwidth,
+    ]
+\addplot coordinates {($d_{3/2}$,132)};
+\addplot coordinates {($d_{3/2}$,143)};
+\addplot coordinates {($d_{3/2}$,111)};
+\addplot coordinates {($d_{5/2}$,162)};
+\addplot coordinates {($d_{5/2}$,160)};
+\addplot coordinates {($d_{5/2}$,120)};
+\legend{
+        %nrel,spinfree,
+        Fano $d_{3/2}$, MCDF $d_{3/2}$, exp. $d_{3/2}$,
+        Fano $d_{5/2}$, MCDF $d_{5/2}$, exp. $d_{5/2}$}
+\end{axis}
+\end{tikzpicture}
+

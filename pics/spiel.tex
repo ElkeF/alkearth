@@ -1,0 +1,78 @@
+\documentclass[dvipsnames]{article}
+\usepackage{tikz,pgfplots}
+\usepackage{tikz-qtree}
+\usepackage{units}
+\usepackage{braket}
+\usepackage[]{xcolor}
+\pgfplotsset{compat=1.13}
+%\pgfplotsset{colormap={mix}{
+%	color(0cm)=(blue);
+%	color(1cm)=(green);
+%	color(2cm)=(yellow)
+%	color(3cm)=(red)}}
+
+\usetikzlibrary{patterns,shadows,fadings,positioning,trees,calc}
+\usepgfplotslibrary{external}
+%\tikzexternalize
+
+
+\tikzfading[name=fade inside,
+         inner color=transparent!80,
+         outer color=transparent!30]
+\tikzfading[name=fade out,
+         inner color=transparent!0,
+         outer color=transparent!90]
+
+
+%\definecolor{diplom1}{rgb}{0.0 0.4 1.0}
+%\definecolor{diplom2}{rgb}{0.0 0.0 0.6}
+\definecolor{diplom1}{RGB}{101 156 239}
+\definecolor{diplom2}{RGB}{000 000 128}
+\definecolor{diplom3}{RGB}{153,0,0} %unirot
+\definecolor{diplom4}{RGB}{232,215,23}
+\definecolor{diplom5}{RGB}{51,37,60}
+
+\definecolor{unirot}{RGB}{153,0,0}
+\definecolor{unirot_hell}{RGB}{255,228,225}
+\definecolor{lightblue}{RGB}{242.2,249.88,255}
+
+\pgfplotsset{colormap={diplom1s}{
+       color(0cm)=(white);
+       color(1cm)=(diplom1);
+       color(10cm)=(diplom1)}}
+\pgfplotsset{colormap={diplom2s}{
+       color(0cm)=(white);
+       color(1cm)=(diplom1);
+       color(2cm)=(diplom2)}}
+\pgfplotsset{colormap={blues}{
+       color(0cm)=(diplom2);
+       color(1cm)=(diplom1);
+       color(2cm)=(white);
+       color(3cm)=(diplom1);
+       color(4cm)=(diplom2)}}
+
+\pgfplotsset{
+   /pgfplots/bar  cycle  list/.style={/pgfplots/cycle  list={%
+        {diplom1,  fill=diplom1!30!white,  mark=none,very thick},%
+        {diplom2,  fill=diplom2!30!white,  mark=none,very thick},%
+        {diplom3,  fill=diplom3!30!white,  mark=none,very thick},%
+        {orange,   fill=orange!30!white,   mark=none,very thick},%
+        {LimeGreen,fill=LimeGreen!30!white,mark=none,very thick},%
+        {Fuchsia,  fill=Fuchsia!30!white,  mark=none,very thick},%
+        {Green,    fill=Green!30!white,    mark=none,very thick},%
+        {Goldenrod,fill=Goldenrod!30!white,mark=none,very thick},%
+     }
+   },
+}
+
+\begin{document}
+
+%\input{sr_gamma}\\
+%\input{aug_sr_gamma}\\
+
+%\input{ba_gamma}\\
+%\input{ra_gamma}\\
+\input{aug_ra_gamma}
+%\input{kr_xe_rn}
+
+\end{document}

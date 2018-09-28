@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+\begin{axis}[
+    ybar,
+    enlargelimits=0.15,
+    legend style={at={(0.5,-0.15)},
+      anchor=north,legend columns=-1},
+    ylabel={$\Gamma$ [meV]},
+    %ylabel={\#participants},
+    symbolic x coords={Sr},
+    xtick=data,
+    nodes near coords,
+    nodes near coords align={vertical},
+    enlarge x limits=0.25, %space left and right
+    axis line style = very thick,
+    tick style = very thick
+    ]
+\addplot coordinates {(Sr,1.888)};
+\addplot coordinates {(Sr,2.274)};
+\addplot coordinates {(Sr,1.321)};
+\addplot coordinates {(Sr,2.269)};
+\addplot coordinates {(Sr,0.635)};
+\addplot coordinates {(Sr,0.940)};
+\addplot coordinates {(Sr,7.712)};
+\addplot coordinates {(Sr,25.49)};
+\addplot coordinates {(Sr,6.064)};
+\addplot coordinates {(Sr,18.88)};
+\legend{nrel 1,nrel 2,spinfree 1,spinfree 2,$p_{1/2}$ 1,$p_{1/2}$ 2,$p_{3/2,1/2}$ 1,$p_{3/2,1/2}$ 2,$p_{3/2,3/2}$ 1,$p_{3/2,3/2}$ 2};
+\end{axis}
+\end{tikzpicture}
+
