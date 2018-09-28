@@ -4,7 +4,7 @@
 \usepackage{units}
 \usepackage{braket}
 \usepackage[]{xcolor}
-\pgfplotsset{compat=1.13}
+\pgfplotsset{compat=1.14}
 %\pgfplotsset{colormap={mix}{
 %	color(0cm)=(blue);
 %	color(1cm)=(green);
@@ -13,7 +13,7 @@
 
 \usetikzlibrary{patterns,shadows,fadings,positioning,trees,calc}
 \usepgfplotslibrary{external}
-%\tikzexternalize
+\tikzexternalize
 
 
 \tikzfading[name=fade inside,
@@ -52,7 +52,7 @@
        color(4cm)=(diplom2)}}
 
 \pgfplotsset{
-   /pgfplots/bar  cycle  list/.style={/pgfplots/cycle  list={%
+   /pgfplots/bar cycle list/.style={/pgfplots/cycle list={%
         {diplom1,  fill=diplom1!30!white,  mark=none,very thick},%
         {diplom2,  fill=diplom2!30!white,  mark=none,very thick},%
         {diplom3,  fill=diplom3!30!white,  mark=none,very thick},%
@@ -65,6 +65,17 @@
    },
 }
 
+\pgfplotscreateplotcyclelist{diplom}{
+diplom1,every mark/.append style={fill=diplom1!30!white},mark=*\\
+diplom2,every mark/.append style={fill=diplom2!30!white},mark=*\\
+diplom3,every mark/.append style={fill=diplom3!30!white},mark=*\\
+orange,every mark/.append style={fill=orange!30!white},mark=*\\
+LimeGreen,every mark/.append style={fill=LimeGreen!30!white},mark=*\\
+Fuchsia,every mark/.append style={fill=Fuchsia!30!white},mark=*\\
+Green,every mark/.append style={fill=Green!30!white},mark=*\\
+Goldenrod,every mark/.append style={fill=Goldenrod!30!white},mark=*\\
+}
+
 \begin{document}
 
 %\input{sr_gamma}\\
@@ -72,7 +83,11 @@
 
 %\input{ba_gamma}\\
 %\input{ra_gamma}\\
-\input{aug_ra_gamma}
+%\input{aug_ra_gamma}
 %\input{kr_xe_rn}
+
+\input{sr_R}
+\input{ba_R}
+\input{ra_R}
 
 \end{document}
