@@ -3,20 +3,134 @@ Electronic decay processes are initiated by a sub-outer valence ionization
 or excitation. The system relaxes by filling the vacancy with an electron and
 transferring the excess energy to another electron of the system, which is emitted.
 Popular examples of electronic decay processes are the
-well known Auger process \cite{Meitner22} and the Interparticle
-Coulombic Decay (ICD) process \cite{Cederbaum97}.
+well known Auger process \cite{Meitner22,Auger23} and the Interparticle
+Coulombic Decay (ICD) process \cite{Cederbaum97,Marburger03}.
 Depending on the system, they are characterized by lifetimes from attoseconds
 to picoseconds. They are therefore often faster than competing decay mechanisms
 like radiative relaxation or a coupling to the system's nuclear motion.
 
+Electronic decay processes in general can occur if
+two criteria, the energy and the coupling criterion,
+are fulfilled. To fulfill the energy criterion the final state energy is required
+to be lower than
+the energy of the singly ionized initial state. If this is not the case, the
+channel defined by a certain doubly ionized final state
+is closed and the corresponding fragments of the
+channel are not observed after the decay.
+To fulfill the coupling criterion, the decay process needs to be fast enough
+to prevail over other energetically accessible decay pathways.
+It hence contains
+the information whether an energetically allowed process can be expected
+to be observed experimentally or not.
+Therefore, a typical study of autoionization processes consists of two parts:
+\begin{itemize}
+ \item determination of the kinetic energy of the secondary electron
+       and, as a consequence, which decay channels are open
+ \item calculation of the decay width $\Gamma=\frac{\hbar}{\tau}$, which
+       is proportional to the decay rate $\frac{1}{\tau}$ and
+       inversely proportional to the lifetime $\tau$
+\end{itemize}
+
+HIER
+In this work we therefore focus on the atomic Auger process     
+as a model system in order                                      
+to exploit basic knowledge about the influence of relativistic effects.       
+The Auger decay process initiated by a photoionization          
+can most generally be described by:                             
+\begin{equation*}                                               
+ A \quad \xrightarrow{h\nu}\quad (A^+)^* + e^-_{ph} \quad       
+    \xrightarrow{Auger} \quad A^{2+} + e^-_{ph} + e^-_{sec}     
+\end{equation*}                                                 
+                                                                
+A system $A$ is ionized, while the photo-electron $e^-_{ph}$ is emitted.      
+Afterwards, the actual Auger process of the initial state $A^+$ can occur.    
+An electron from an outer                                       
+shell fills the vacancy and the excess energy is instantaneously transferred  
+to another (secondary) electron $e^-_{sec}$, which              
+is subsequently emitted. The final state of the decay process   
+is to be described by a doubly charged atom $A^{2+}$ and the secondary        
+electron in the continuum.
+
 The primary ionization often removes an electron from an atomic core, where
 relativistic effects are stronger than for valence electrons. The relativistic
 effects can therefore be expected to play a crucial role for the understanding
-of the systems' lifetimes. We have previously shown, how
+of the systems' lifetimes.
+Phenomenologically, the relativistic effects can be divided  
+into spin-orbit coupling and scalar-relativistic effects. The spin-orbit       
+coupling requires the system to be described in terms of the total angular     
+momentum $j$ rather than the orbital momentum $l$ and the spin momentum $s$.   
+Thereby the non-relativistically degenerate states of one particular $l$       
+value are split into two states with $j=l\pm s$ of different energies          
+\cite{ReiherWolf09}.                                            
+The scalar-relativistic effects result in spatial               
+contractions of the s and p orbitals                            
+and decontraction of d and f orbitals \cite{ReiherWolf09}.
+
+The initial and final state energies can be obtained using      
+a variety of quantum chemical approaches known in the literature as the       
+Algebraic Diagrammatic Construction \cite{Schirmer82_1,Schirmer91,Schirmer98, 
+Mertins96_1} (ADC), which is also                               
+available for a fully relativistic treatment                    
+\cite{Pernpointner04_1,Pernpointner04_2,Pernpointner10_1}.
+The calculation of the respective lifetimes is a challenging task, because it
+requires the description of both bound and continuum electrons. The bound electrons
+are best described by wavefunctions with $\mathcal{L}^2$ boundary conditions,
+while continuum electrons far away from the atom are best described by
+plane waves. This imposes the technical choice between a) describing the entire
+atom using an $\mathcal{L}^2$ basis, b) describing the entire process using
+a grid, or c) describing the bound electrons using an $\mathcal{L}^2$ basis
+and the continuum electron using a grid.
+Either     
+of these approaches faces difficulties in either describing the bound or the  
+continuum states or some artificially constructed interface region.
+Traditionally, most quantum
+chemical program packages are based on $\mathcal{L}^2$ bases and we therefore
+choose to describe the electronic decay processes using a large $\mathcal{L}^2$
+basis for convenience.
+
+The quantum chemical methods, which have been used for non-relativistic       
+descriptions of the decay widths are the Wigner-Weisskopf       
+theory \cite{Santra02}, CAP-CI                                  
+(Complex Absorbing Potential based on a Configuration Interaction wavefunction)
+\cite{SakuraiModern94,Santra01_3}, CAP-ADC \cite{Vaval07},      
+CAP/EOM-CCSD (Equation of Motion Coupled Cluster with Singles and Doubles)    
+\cite{Ghosh14} and the FanoADC-Stieltjes method                 
+\cite{Averbukh05}.                                              
+While the CAP-based methods have the most sound formal basis    
+of the methods above, they suffer from wrong densities and populations for    
+many-particle systems                                           
+and are computationally expensive at the same time.             
+In contrast to this, the                                        
+Wigner-Weisskopf theory is based on the lowest                  
+non-vanishing order of perturbation                             
+theory and therefore computationally affordable even for large systems.       
+However, the price for the lower                                
+computational costs are less accurate results. A compromise between
+accuracy and computational cost is the FanoADC-Stieltjes approach, which      
+is based on the {ADC} and therefore includes                    
+higher perturbational orders and is size-consistent.            
+For these reasons,                                              
+the FanoADC-Stieltjes method was implemented in the relativistic
+quantum chemical program package Dirac \cite{DIRAC13}. We present first results
+obtained with the relativistic FanoADC-Stieltjes method in this work.
+
+HIER
+So far, relativistic decay widths were calculated using         
+Multichannel Multi-Configurational Dirac-Fock (MMCDF) \cite{Fritzsche11}.     
+However, this approach                                          
+does not only highly depend on manual selection of CI (Configuration
+Interaction) components to be included in the description of initial and      
+final state, it moreover is not capable of describing systems with less       
+than spherical symmetry. This reduces the applicability of the method to      
+atomic Auger processes, but allows us to compare our results obtained with    
+the relativistic FanoADC-Stieltjes method for exactly this special case.
+
+We have previously shown, how
 scalar-relativistic effects influence the lifetimes of the Auger process in
 noble gas atoms. After primary ionization from the $(n-1)d$ orbitals the nobel
 gas atoms decay to $np^{-2}$, $np^{-1}ns^{-1}$ and $ns^{-2}$ final states.
-We observed that the Auger decay widths increased by up to 600\% for radon
+We observed that the Auger decay widths increased by up to \unit[326]{\%}
+for radon
 by including scalar-relativistic effects in the calculation. This
 dramatic increase could be explained by the larger overlap of the orbitals
 involved in the decay compared to non-relativistic calculations due to
@@ -31,16 +145,9 @@ have the benefit of a single and closed shell $ns^{-2}$ final state.
 This allows us to purely study the effect of the spin-orbit coupling of the
 initial state on the decay widths.
 
-The calculation of the respective lifetimes is a challenging task, because it
-requires the description of both bound and continuum electrons. The bound electrons
-are best described by wavefunctions with $\mathcal{L}^2$ boundary conditions,
-while continuum electrons far away from the atom are best described by
-plane waves. This imposes the technical choice between a) describing the entire
-atom using an $\mathcal{L}^2$ basis, b) describing the entire process using
-a grid, or c) describing the bound electrons using an $\mathcal{L}^2$ basis
-and the continuum electron using a grid. All these options have advantages and
-disadvantages that we will not discuss at this point. Traditionally, most quantum
-chemical program packages are based on $\mathcal{L}^2$ bases and we therefore
-choose to describe the electronic decay processes using a large $\mathcal{L}^2$
-basis in this work.
-
+The paper is structured as follows:
+In section \ref{section:theory} we recapitulate the basics of the
+FanoADC-Stieltjes method. We then give the computational details for our
+ab initio calculations in section \ref{section:computational}. We present the
+results and their interpretation in section \ref{section:results}
+and conclude in section \ref{section:conclusions}.
