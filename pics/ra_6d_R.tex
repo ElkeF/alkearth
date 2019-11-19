@@ -53,19 +53,6 @@
          ]
          table[
          x expr= 0.529 * (\thisrowno{1}),
-         y expr={(\thisrowno{6})^2 + (\thisrowno{7})^2}
-         ]
-         {../data/ra_configs/6d/ra_7.dat};
-         \addlegendentry{Ra rel. 7$s$};
-
-
-\addplot+[
-         mark=none,
-         %color=diplom1,
-         very thick
-         ]
-         table[
-         x expr= 0.529 * (\thisrowno{1}),
          y expr={(\thisrowno{2})^2 + (\thisrowno{3})^2}
          ]
          {../data/ra_configs/6d/ra_7.dat};
@@ -82,6 +69,19 @@
          ]
          {../data/ra_configs/6d/ra_7.dat};
          \addlegendentry{Ra rel. 6$d_{5/2}$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{6})^2 + (\thisrowno{7})^2}
+         ]
+         {../data/ra_configs/6d/ra_7.dat};
+         \addlegendentry{Ra rel. 7$s_{1/2}$};
+
 
 
 \end{axis}
