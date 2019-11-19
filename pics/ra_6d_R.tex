@@ -1,0 +1,88 @@
+\begin{tikzpicture}[scale=1.0]
+
+\begin{axis}[%scale=1.5,
+             domain=0:2.5,
+             restrict expr to domain={x}{0:2.5},
+             %restrict expr to domain={y}{1.0E-12:7},
+             xlabel={r [\AA]},
+             %xtick={30,50,...,170},
+             %xticklabels={2,4,6,8,10,12,15,20,25},
+             %ytick={-1.0,-0.8,...,1.0},
+             %yticklabels={1.0,0.8,0.6,0.4,0.2,0.0,0.2,0.4,0.6,0.8,1.0},
+             ylabel={$P(r)^2 + Q(r)^2$},
+             scale only axis,
+             width=12cm,
+             height=8cm,
+             %ybar stacked
+             cycle list name = diplom,
+             %cycle list name = exotic,
+             legend cell align=right,
+             axis line style = very thick,
+             tick style = very thick
+             ]
+
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{2})^2 + (\thisrowno{3})^2}
+         ]
+         {../data/ra_configs/6d/ra_6.dat};
+         \addlegendentry{Ra rel. 6$p_{1/2}$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{4})^2 + (\thisrowno{5})^2}
+         ]
+         {../data/ra_configs/6d/ra_6.dat};
+         \addlegendentry{Ra rel. 6$p_{3/2}$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{6})^2 + (\thisrowno{7})^2}
+         ]
+         {../data/ra_configs/6d/ra_7.dat};
+         \addlegendentry{Ra rel. 7$s$};
+
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{2})^2 + (\thisrowno{3})^2}
+         ]
+         {../data/ra_configs/6d/ra_7.dat};
+         \addlegendentry{Ra rel. 6$d_{3/2}$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= 0.529 * (\thisrowno{1}),
+         y expr={(\thisrowno{4})^2 + (\thisrowno{5})^2}
+         ]
+         {../data/ra_configs/6d/ra_7.dat};
+         \addlegendentry{Ra rel. 6$d_{5/2}$};
+
+
+\end{axis}
+\end{tikzpicture}
