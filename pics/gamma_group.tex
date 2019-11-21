@@ -3,7 +3,7 @@
      group style = {group size = 2 by 1, horizontal sep=2cm},
      enlargelimits=0.15,
      height = 7cm,
-     width = 4cm,
+     width = 4.5cm,
      ybar = 8pt,
      legend style={at={(-0.4,-0.15)},
        anchor=north,legend columns=-1},
@@ -17,15 +17,17 @@
      tick style = very thick,
     ]
     \nextgroupplot[ymin=0]
-    \addplot coordinates {(Sr,0.78) };
+    \addplot coordinates {(Sr,0.56) };
+    \addplot coordinates {(Sr,0.10) };
     \addplot coordinates {(Sr,1.23) };
     \addplot coordinates {(Sr,1.17) };
 
     \nextgroupplot[ymin=0]
+    \addplot coordinates { (Ra,28.56)};
     \addplot coordinates { (Ra,0.26)};
     \addplot coordinates { (Ra,93.16)};
     \addplot coordinates { (Ra,98.86)};
-\legend{$p_{1/2}$,$p_{3/2,1/2}$,$p_{3/2,3/2}$};
+\legend{spinfree,$p_{1/2}$,$p_{3/2,1/2}$,$p_{3/2,3/2}$};
   \end{groupplot}
 \end{tikzpicture}
 
