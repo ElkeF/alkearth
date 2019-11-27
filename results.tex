@@ -1,19 +1,27 @@
 \section{Results}
 \label{section:results}
 
+In order to analyze the decay processes, we first discuss the energetic
+accessibility of different decay channels and then present the corresponding
+Auger decay widths.
 In Fig. \ref{fig:sdip} we present the computed
 single and double ionization spectra
-of strontium in order to analyze the possible decay channels. The main peaks of the
+of strontium obtained by DC-ADC calculations. The main peaks of the
 ionization
-from the Sr$4p_{3/2}$ and the Sr$4p_{1/2}$ have single ionization potentials (SIP)
-of \unit[28.277]{eV} and \unit[29.402]{eV}, respectively. These energies are higher
+from the Sr$4p_{3/2}$ and the Sr$4p_{1/2}$ have single ionization potentials (SIPs)
+of \unit[28.277]{eV} and \unit[29.402]{eV}, respectively. The experimental
+values of \unit[]{eV} and \unit[]{eV} are very close and varify the applicability
+of the chosen method.
+They are characterized by pole-strengths of xy and xy
+(see Table \ref{tab:widths}). We will at this point treat them as single
+configurations and analyze them in detail later.
+These two single ionization energies are higher
 than only one double ionization potential (DIP) of \unit[16.430]{eV},
 which is to \unit[99.7]{\%} characterized by the double ionization from
-the $5s$ valence. The Auger process is therefore energetically accessible.
-For radium the spectra are qualitatively the same and
-allow the same conclusion. The single ionization energies and polestrengths
-of the main
-peaks of the intial ionizations are collected in Table \ref{tab:widths}.
+the $5s$ valence. The Auger process is therefore energetically accessible and
+results in a single final state.
+For radium the spectra are qualitatively equivalent and
+allow the same conclusion.
 
 \begin{figure}[h]
  \centering
@@ -25,7 +33,9 @@ peaks of the intial ionizations are collected in Table \ref{tab:widths}.
 
 \input{widths_orig}
 
-We present the decay widths of strontium and radium in Table \ref{tab:widths}
+We present the corresponding decay
+widths of strontium and radium obtained by relativistic FanoADC-Stieltjes
+calculations in Table \ref{tab:widths}
 for the scalarrelativistic spinfree $(n-1)p^{-1}$ as well as the
 fully relativistic $(n-1)p_{1/2,1/2}^{-1}$, $(n-1)p_{3/2,1/2}^{-1}$ and
 $(n-1)p_{3/2,3/2}^{-1}$ initial states. They are illustrated in Fig. \ref{fig:gamma}.
@@ -33,13 +43,21 @@ To the best of my knowledge, the Auger decay widths of these systems have
 not been presented in the literature so far, even though xyz compare their
 radiative lifetimes to Auger widths, which they seem to have gained
 from private communication with xyz \cite{}.
-Despite the difference in absolute numbers, the different decay widths
+
+Despite the difference in absolute numbers, the decay widths
 of the different initial states show the same pattern. The decay width of
 the $(n-1)p_{1/2,1/2}^{-1}$ initial state is lowest, while the decay widths
 of the $(n-1)p_{3/2,1/2}^{-1}$ and
 $(n-1)p_{3/2,3/2}^{-1}$ initial states are close and significantly higher than
-for the $(n-1)p_{1/2,1/2}^{-1}$ initial state. The decay widths of the
-spinfree calculations is in between these values.
+for the $(n-1)p_{1/2,1/2}^{-1}$ initial state.
+In case of the strontium atom the decay width of the $p_{3/2}$ initial state
+is approximately 12 times higher than the decay with of the $p_{1/2}$ initial state.
+In radium, the corresponding factor is 380.
+Furthermore, the decay width average of the $p_{3/2}$ initial state is increased 
+by \unit[114]{\%} and \unit[236]{\%} for strontium and radium, respectively.
+We can therefore observe an increase
+of the decay width difference of the $p_{3/2}$ initial state both
+compared to the $p_{1/2}$ and spinfree initial state for heavier atoms.
 How can this result be understood?
 
 \begin{figure}[h]
@@ -100,21 +118,18 @@ as well as the from the $4d$ orbitals of barium \cite{}
 showed the necessity to include excitations from the valence $s$ orbital to
 the $d$ orbitals, which are unpopulated in the ground state, in the
 description of the initial state.
-In our case, this would require to include the following processes in our
+In our case, this would require to include the following configurations in our
 simulations:
-
-\begin{align*}
- (n-1)p^{-1} \,ns^2         \rightarrow & (n-1)p^6 + e^- \\
- (n-1)p^{-1} \,(n-1)d \, ns \rightarrow & (n-1)p^6 + e^- \\
- (n-1)p^{-1} \,(n-1)d^2     \rightarrow & (n-1)p^6 + e^- .
-\end{align*}
+ $(n-1)p^{-1} \,ns^2$,
+ $(n-1)p^{-1} \,(n-1)d \, ns$ and
+ $(n-1)p^{-1} \,(n-1)d^2$ .    
 
 Indeed, the analysis of the ADC eigenvectors of the initial states of both
 strontium and radium showed,
 that beyond the single and main $1h$ contribution of the respective $p$ orbital, the
 initial state is mainly characterized by $2h1p$ configurations of the
-$(n-1)p^{-1} \,ns \, (n-1)d$ kind and the $(n-1)p^{-1} \,(n-1)d \, ns$
-configurations are therefore automatically included in our simulations.
+$(n-1)p^{-1} \,ns \, (n-1)d$ kind. They
+are therefore automatically included in our simulations.
 The FanoADC-Stieltjes approach is however limited
 to perturbation theory of second order, which are further corrected by third order
 terms, but does not go beyond $2h1p$ configurations. This means, that the
@@ -124,19 +139,19 @@ How do these configurations affect the decay widths? Since the overlap of the
 orbitals involved in the decay determine the decay widths, we show the
 radial densities of the orbitals involved in the decay of the $6p^5 6d 7s$
 configuration of radium in Fig.~\ref{fig:radial_ra}.
-The radial densities of the $6p$ and $7s$ orbitals hardly differ from the
-corresponding radial densities of the ionic $6p^{-1} \,7s^2$ configurations
-shown in Fig.~\ref{fig:radial_pure}. However, the $6d$ orbitals, which are involved
-of the Auger process of this configuration shows a larger overlap with both
+The $6p$ orbitals are slightly more contracted than in the $6p^{-1} \,7s^2$
+configuration, while the $7s$ orbital is slightly decontracted by a difference
+of the electron's distance from the nucleus $\Delta <r>$ of \unit[0.046]{\AA}.
+However, the $6d$ orbitals, which are involved
+in the Auger process of this configuration show a large overlap with both
 the $6p$ and the $7s$ orbitals. The corresponding decay width should therefore
 be larger than the decay width of the $6p^{-1} \,7s^2$ configuration.
 The prevalence of the $(n-1)p_{3/2}$ decay width over the $(n-1)p_{1/2}$
 also holds for this configuration.
-If the $(n-1)p^{-1} \,(n-1)d^2$ configurations would turn out to
+If the $(n-1)p^{-1} \,(n-1)d^2$ configurations
 have non-negligible contributions
-in a more accurate calculation,
-the presented decay widths of Table~\ref{tab:widths} would then be
-lower bounds to the real decay widths.
+the presented decay widths of Table~\ref{tab:widths} would be
+lower bounds to the results of a more accurate decay width calculation.
 
 \begin{figure}[h]
  \centering
@@ -152,23 +167,33 @@ The observed differences in the decay widths for different initial states and
 Hamiltonians can therefore not necessarily only be accounted for by relativistic
 effects, but different contributions of the $(n-1)p^{-1} \,(n-1)d \, ns$
 configurations may also affect the result.
-The pole-strength, i. e., the absolute square of the $1h$ coefficients,
-of the different initial states are
-given in Table \ref{tab:widths}.
+In this case, the requires measure is the pole-strength, i. e.,
+the absolute square of the $1h$ coefficients,
+of the different initial states, which are listed in Table \ref{tab:widths}.
 Since the analysis of the eigenvectors has shown the other significant contributions
 to be of the $(n-1)p^{-1} \,ns \, (n-1)d$ kind, we for our discussion assume, that
-they are the only other contributions.
+they are the only other contributions and that their contribution is $1-\text{ps}$.
 For strontium, the pole-strengths are similar, but not identical for all initial
-states and Hamiltonians. For radium, however, the pole-strengths are very different.
+states and Hamiltonians. 
+We can therefore predominantly attribute the decay width difference between the
+$p_{3/2}$ and $p_1/2$ initial state to spin-orbit coupling rather than the
+differences in the contributions of the $4p^54d5s$ configuration.
+For radium, however, the pole-strengths of the initial states differ.
 The $6p_{1/2}$ initial state has a pole-strength of 0.78, while both the
 initial state of the scalarrelativistic Hamiltonian and the $6p_{3/2}$ initial
 state have much lower pole-strengths of 0.49 and 0.50, respectively.
 The $6p^{-1} \,7s^2$ configuration is therefore predominant for the $6p_{1/2}$
-initial state, while it is not for the $6p_{3/2}$ initial state. This could
-explain the observed discrepancy of decay widths of the $6p_{3/2}$ and
-$6p_{1/2}$ initial states. However, the initial state determined with the spinfree
-Hamiltonian has a comparable pole-strength, but a significantly lower decay
-width. We can therefore conclude that the spin-orbit coupling does affect
+initial state, while it is not for the $6p_{3/2}$ initial state.
+We can therefore not attribute the discrepancy of the decay widths of the
+$6p_{1/2}$ and $6p_{3/2}$ initial states to spin-orbit splitting alone.
+However, the initial state determined with the spinfree
+Hamiltonian has a comparable pole-strength to the $6p_{3/2}$ initial states,
+but the decay width of the $6p_{3/2}$ initial state is increased by \unit[236]{\%}
+compared to the spinfree result and therefore
+significantly lower.
+Hence, we can explain the increase of the decay width from the spinfree to the
+$6p_{3/2}$ initial state by spin-orbit coupling.
+We conclude that the spin-orbit coupling does affect
 the Auger decay widths, even though it is not the only factor for the
 earth alkaline atoms.
 
