@@ -13,8 +13,8 @@ primary ionization is given by
 
 Here, $\ket{\Phi}$ and $\ket{\chi_{\beta,\varepsilon}}$ denote the initial and
 final state, respectively. $\hat{V}$ is the interaction operator of the
-initial and final states, which in Feshbach's definitions is known as $H_{PQ}$.
-The index $\beta$ counts the different
+initial and final states, which in Feshbach's definition is known as $H_{PQ}$.
+The index $\beta$ refers to the different
 decay channels and $\varepsilon$ denotes the energy of the final state.
 Eq. (\ref{equation:Fano_golden}) thereby connects the metastable initial
 and the continuum final states. They are constructed by partitioning the
@@ -34,7 +34,7 @@ While the continuum functions are normalized with respect to their energy
 the $\mathcal{L}^2$ approach is based on a discrete set of final states
 $\ket{\tilde{\chi}_{\tilde{E}}}$
 which adhere to different boundary
-conditions and are normalized with respect to space (see e.g. \cite{Craigie14}):
+conditions and are normalized with respect to space (see e.g. \cite{Craigie14})
 \begin{equation}
  \braket{ \tilde{\chi}_{\tilde{E}_i} | \tilde{\chi}_{\tilde{E}_j} } = \delta_{ij}.
 \end{equation}
@@ -45,7 +45,7 @@ autoionization processes such difficulties
 can be solved by using the
 Stieltjes-Chebyshev moment theory also called Stieltjes imaging
 \cite{Langhoff76,Corcoran77,MuellerPlathe90}.
-It relies on the observation that the moments of the projected final
+It relies on the observation that the moments of order $k$ of the projected final
 state Hamiltonian $H_f$
 
 \begin{equation}
@@ -61,12 +61,12 @@ the continuum states
 \begin{equation}
  \mu_k = \sum_i \varepsilon_i^k
          \left| \braket{ \Phi | \hat{V} | \chi_{i,\varepsilon} } \right| ^2
-       + \int\limits_{E_{thr}}^{\infty} \varepsilon^k
+       + \int\limits_{E_{0}}^{\infty} \varepsilon^k
          \left| \braket{\Phi|\hat{V}|\chi_{\varepsilon}} \right|^2 \mathrm{d}\varepsilon  .
 \end{equation}
 
 Since the non-zero contribution to the coupling matrix elements in the
-Feshbach-Fano approach stem only
+Feshbach-Fano approach stems only
 from an interaction region of finite size, where the $\mathcal{L}^2$ final
 state functions are nonvanishing, we may replace the expansion
 $\sum\limits_i \ket{\chi_{i,\varepsilon}} \bra{\chi_{i,\varepsilon}}
@@ -84,9 +84,13 @@ $\sum\limits_j \ket{\tilde{\chi}_{\tilde{E}_j}} \bra{\tilde{\chi}_{\tilde{E}_j}}
 Then the decay width can be determined through a series of
 consecutive approximations to the moments of increasing order $k$.
 
-To achieve this kind of description, we choose the non-relativistic
+To achieve this kind of description, we choose the relativistic
 FanoADC-Stieltjes approach.
-Here, the ADC is used for the description of the
-initial and final states and the resulting discrete pseudo-spectrum
+Here, a proper selection of $2h1p$ intermediate state configurations are used
+for the description of the continuum final state,
+while the rest is used for the description
+of the initial state.
+The resulting discrete pseudo-spectrum
 is then subject to a Stieltjes imaging procedure.
-An exhaustive description of the method can be found in \cite{Fasshauer15_1,Fasshauer_thesis}.
+An exhaustive description of the method can be found in Refs. \cite{Fasshauer15_1}
+and \cite{Fasshauer_thesis}.
