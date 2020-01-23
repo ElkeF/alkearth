@@ -1,9 +1,11 @@
 \begin{tikzpicture}[scale=1.0]
 
 \begin{axis}[%scale=1.5,
-             domain=0:170,
+             domain=0:100,
              %y domain=1E-8:10,
-             restrict expr to domain={x}{0:170},
+             restrict expr to domain={x}{0:100},
+             xmin = 0,
+             xmax = 100,
              xlabel={E in \unit{eV}},
              %xtick={30,50,...,170},
              %xticklabels={2,4,6,8,10,12,15,20,25},
@@ -48,12 +50,16 @@
         \addlegendimage{line legend, diplom2, thick};
         \addlegendentry{DIPs(Sr)};
 
-%\node[pin={[pin distance=0.2cm]170:{\tiny 4d$_{5/2}^{-1}$}}]
-%     at (axis cs:67.03,0.6) {};
-%\node[pin={[pin distance=0.2cm]10:{\tiny 4d$_{3/2}^{-1}$}}]
-%     at (axis cs:69.06,0.6) {};
-%\node[pin={[pin distance=0.2cm]170:{\tiny 4p$_{3/2}^{-1}$}}]
-%     at (axis cs:146.6,0.2) {};
+\node[pin={[pin distance=0.2cm]10:{\tiny 5s$_{1/2}^{-1}$}}]
+     at (axis cs:4.6,0.8) {};
+\node[pin={[pin distance=0.2cm]170:{\tiny 4p$_{3/2}^{-1}$}}]
+     at (axis cs:28.9,0.6) {};
+\node[pin={[pin distance=0.2cm]10:{\tiny 4p$_{1/2}^{-1}$}}]
+     at (axis cs:27.89,0.6) {};
+\node[pin={[pin distance=0.2cm]10:{\tiny 4s$_{1/2}^{-1}$}}]
+     at (axis cs:46.5,0.4) {};
+\node[pin={[pin distance=0.2cm]190:{\tiny 5s$_{1/2}^{-2}$}}]
+     at (axis cs:17.0,-0.7) {};
 %\draw[] (axis cs:165,0.15) arc [radius=0.75cm,start angle=10,end angle=100];
 %\node[pin={[pin distance=0.2cm]20:{\tiny 4p$_{1/2}^{-1}$}}]
 %     at (axis cs:159.6,0.23) {};

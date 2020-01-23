@@ -12,6 +12,7 @@
 %	color(3cm)=(red)}}
 
 \usetikzlibrary{patterns,shadows,fadings,positioning,trees,calc}
+\usepgfplotslibrary{groupplots}
 \usepgfplotslibrary{external}
 \tikzexternalize
 
@@ -78,22 +79,30 @@ Goldenrod,every mark/.append style={fill=Goldenrod!30!white},mark=*\\
 
 \begin{document}
 
-%\input{sr_gamma}\\
+%\input{sr_gamma}
 %\input{aug_sr_gamma}\\
 
 %\input{ba_gamma}\\
-%\input{ra_gamma}\\
+%\input{ra_gamma}
 %\input{aug_ra_gamma}
 %\input{kr_xe_rn}
+
+\input{gamma_group}
+
+%\input{sr_ba_ra}
 
 %\input{ne_R}
 %\input{sr_R}
 %\input{ba_R}
 %\input{ra_R}
 
-\input{sr_ion_R}\\
-\input{ba_ion_R}\\
-\input{ra_ion_R}
+%\input{sr_ion_R}\\
+%\input{ba_ion_R}\\
+%\input{ra_ion_R}
 
+%\input{ra_6d_R}
+%\input{ra_6d2_R}
+
+%\input{Sr_rel_sdip}
 
 \end{document}
