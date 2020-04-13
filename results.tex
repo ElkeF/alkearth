@@ -11,7 +11,9 @@ ionization
 from the Sr$4p_{3/2}$ and the Sr$4p_{1/2}$ have single ionization potentials (SIPs)
 of \unit[28.277]{eV} and \unit[29.402]{eV}, respectively. The experimental
 values of \unit[28.21]{eV} and \unit[29.17]{eV} are very close and
-varify the applicability
+\textcolor{blue}
+{verify}
+the applicability
 of the chosen method \cite{Schmitz76}.
 They are characterized by pole-strengths, which in this implementation
 is defined as
@@ -45,9 +47,6 @@ fully relativistic $(n-1)p_{1/2,1/2}^{-1}$, $(n-1)p_{3/2,1/2}^{-1}$ and
 $(n-1)p_{3/2,3/2}^{-1}$ initial states. They are illustrated in Fig. \ref{fig:gamma}.
 To the best of my knowledge, the Auger-Meitner decay widths of these systems have
 not been presented in the literature so far.
-%, even though xyz compare their
-%radiative lifetimes to Auger-Meitner widths, which they seem to have gained
-%from private communication with xyz \cite{}.
 
 Despite the difference in absolute numbers, the decay widths
 of the different initial states show the same pattern. The decay width of
@@ -91,8 +90,8 @@ Fig.~\ref{fig:radial_pure}).
 In case of the strontium atom, the radial densities of the $4p_{1/2}$ and the
 $4p_{3/2}$ orbitals are almost identical. But for the radium atom, the radial
 density of the  $6p_{1/2}$ orbital is closer to the nucleus than
-the radial density of the $6p_{3/2}$ orbital. This general property is already
-visible in the analytic solutions of the one-electron system \cite{Bethe_Salpeter}.
+the radial density of the $6p_{3/2}$ orbital.
+\textcolor{red}{This general property is already visible in the analytic solutions of the one-electron system \cite{Bethe_Salpeter}.}
 Because the Auger-Meitner decay rates crucially depend on the overlap of the
 involved orbitals, the decay widths of an $(n-1)p_{3/2}^{-1}$ initial state
 can be expected to be higher than the decay widths of an $(n-1)p_{1/2}^{-1}$
@@ -131,6 +130,9 @@ simulations:
  $(n-1)p^{-1} \,ns^2$,
  $(n-1)p^{-1} \,(n-1)d \, ns$ and
  $(n-1)p^{-1} \,(n-1)d^2$ .    
+\textcolor{blue}
+{Thereby, a fast Coster-Kronig decay is enabled equally for both the $l-1/2$ as
+well as the $l+1/2$ case.}
 
 Indeed, the analysis of the ADC eigenvectors of the initial states of both
 strontium and radium showed
@@ -138,7 +140,13 @@ that beyond the single and main $1h$ contribution of the respective $p$ orbital,
 initial state is mainly characterized by $2h1p$ configurations of the
 $(n-1)p^{-1} \,ns \, (n-1)d$ kind. They
 are therefore automatically included in our simulations.
-The FanoADC-Stieltjes approach is, however, limited
+The
+\textcolor{blue}
+{relativistic}
+FanoADC-Stieltjes
+\textcolor{blue}
+{implementation}
+is, however, limited
 to second order perturbations in the wavefunction
 and therefore does not go beyond $2h1p$ configurations. This means that the
 $(n-1)p^{-1} \,(n-1)d^2$ configurations are not taken into account in this work.
@@ -198,8 +206,7 @@ $6p_{1/2}$ and $6p_{3/2}$ initial states to spin-orbit splitting alone.
 However, the initial state determined with the spinfree
 Hamiltonian has a pole-strength comparable to the $6p_{3/2}$ initial states,
 but the decay width of the $6p_{3/2}$ initial state is increased by \unit[236]{\%}
-compared to the spinfree result and therefore
-significantly lower.
+compared to the spinfree result.
 Hence, we can explain the increase of the decay width from the spinfree to the
 $6p_{3/2}$ initial state by spin-orbit coupling.
 
@@ -218,41 +225,43 @@ the nucleus than the initial state orbitals.
 
 \textcolor{blue}
 {
-%\input{tab_L}
-
+\input{tab_L}
 The question is whether this rule of thumb is applicable to the Auger-Meitner
 processes of other elements. For this, we refer to the Auger-Meitner and
 Coster-Kronig decay widths of $L$ and $M$ initial states extracted from Refs.
 \cite{Chen81,Chen83,Chen80} and presented in Tables \ref{tab:L} -- \ref{tab:M45}.
 We note that this data is limited to comparably heavy elements as simulations
 of Auger-Meitner decay widths based on relativistic wavefunctions are unavailable
-in the literature for lighter elements.
-
-%\input{tab_M}
-
+in the literature for lighter elements.\\
+\input{tab_M}
 It is readily seen that the formulated rule of thumb holds for the Auger-Meitner
 for all cases but one. The latter is the Auger-Meitner process of manganese after
 primary ionization of a $2p$ orbital (see Table \ref{tab:L}).
-However, the rule of thumb is not correct, when Coster-Lronig processes contribute
+However, the rule of thumb is not correct, when Coster-Kronig processes contribute
 unequally to the decay of the $l+1/2$ and $l-1/2$ initial states.
 The $L3$ and the $M5$ initial states are unable to undergo a Coster-Kronig decay
 and they, as well as the $M3$ initial state have one fast decay channel than their
 $l-1/2$ counterpart.
 One may expect a clear trend for the relative decay widths with the nuclear charge
 $Z$, but this hypothesis is not backed up by the data.
-
-%\input{tab_M45}
+\input{tab_M45}
 }
 
-We can also expect this rule of thumbs to extent to ICD and
+\textcolor{blue}
+{Based on the above reasoning, one would also expect}
+this rule of thumb to extend to ICD and
 Electron Transfer Mediated Decay (ETMD) processes as well. The ICD
 decay widths partly depend on the transition dipole moment between the
 initial and final state of the initially ionized unit, which in return increases
 with the overlap of the electron densities of the involved orbitals.
 The ETMD decay widths are determind by the orbital overlap of two different units,
 which is larger for orbitals further away from the nucleus.
-Hence the same argumentation as for the Auger-Meitner process is valid in both
-cases.
+Hence the same argumentation as for the Auger-Meitner process
+\textcolor{blue}
+{should be possible}
+in both cases.
+\textcolor{blue}
+{A validation will be left for future work.}
 
 %We conclude that the spin-orbit coupling does affect
 %the Auger-Meitner decay widths, even though it is not the only factor for the
