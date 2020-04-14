@@ -24,7 +24,8 @@ for filename in glob.glob("*.tex"):
 
    
 #   replacements = {'includegraphics[scale=0.5]':'input', '/compl':'/schale', '/incompl':'/in-shell', '_':'-core', '.ps':'', 'caps':'cap'}
-   replacements = {'Auger-Auger':'Auger'}
+   replacements = {'\\textcolor':'%\\textcolor'}
+   #replacements = {'%\\textcolor':'\\textcolor'}
 
    for line in infile:
       if 'FloatBarrier' not in line:
