@@ -1,4 +1,4 @@
-\documentclass[aps,amssymb,preprint,a4paper]{revtex4}
+\documentclass[aps,amssymb,preprint,a4paper,longbibliography]{revtex4}
 %\documentclass[aps,amssymb,a4paper,twocolumn]{revtex4}
 
 %\usepackage[latin1]{inputenc}
@@ -39,7 +39,7 @@
 
 \title{Effect of Spin-Orbit Coupling on Decay Widths of Electronic Decay Processes}
 
-\author{Elke Fasshauer$^{\text{a,b}}$}
+\author{Elke Fasshauer$^{\text{a}}$}
 \email[]{Email:Elke.Fasshauer@gmail.com}
 
 
@@ -52,19 +52,18 @@ Aarhus University, Ny Munkegade 120, 8000 Aarhus, Denmark}
 %                  Abstract                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\input{abstract}
-
 \begin{abstract}
-Meitner-Auger processes are electronic decay processes of energetically low-lying
+Auger-Meitner processes are electronic decay processes of energetically low-lying
 vacancies. In these processes, the vacancy is filled by an electron of
 an energetically higher lying orbital, while another electron is simulataneously
 emitted to the continuum.
 In low-lying orbitals relativistic effects can not even be neglected for light
 elements. At the same time lifetime calculations are computationally expensive.
 In this context, we investigate which effect spin-orbit coupling has on
-Meitner-Auger
+Auger-Meitner
 decay widths and aim for a rule of thumb for the relative decay widths of
 initial states split by spin-orbit coupling.
-We base this rule of thumb on Meitner-Auger decay widths
+We base this rule of thumb on Auger-Meitner decay widths
 of Sr$4p^{-1}$ and Ra$6p^{-1}$
 obtained by relativistic FanoADC-Stieltjes calculations.
 \end{abstract}
@@ -76,22 +75,27 @@ obtained by relativistic FanoADC-Stieltjes calculations.
 % Introduction
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\input{intro}
+
 \section{Introduction}
 Electronic decay processes are initiated by a sub-outer valence ionization
 or excitation. The system relaxes by filling the vacancy with an electron and
 transferring the excess energy to another electron of the system, which is emitted.
 One examples of electronic decay processes is the
 well known Auger process. It was first discovered
-by Lise Meitner \cite{Meitner22} and later rediscovered
-by Pierre Auger \cite{Auger23}. In order to give credit, where credit is due,
-we will refer to it as the Meitner-Auger process or in short Meitner process.
+by Lise Auger-Meitner \cite{Meitner22} and later rediscovered
+by Pierre Auger \cite{Auger23}. In order to give credit where credit is due
+%\textcolor{blue}
+{and following the renaming suggestion of Ref. \cite{renameAuger19}
+we will refer to it as the Auger-Meitner process.}
 It is found in a variety of different systems like atoms, molecules and solids.
-As a consequence, Meitner spectroscopy
+As a consequence, Auger-Meitner spectroscopy
 is used for surface analysis in metallurgy,
 quality analysis of microelectronics
 as well as for basic studies of chemical reaction mechanisms \cite{AES_Seah_86}.
 Since the advent of short XUV pulses, it has been a test process for
-time-resolved measurements \cite{Smirnova03}
+time-resolved measurements
+%\textcolor{blue}
+{\cite{Drescher02,Smirnova03}}
 and is often observed as a side product of modern x-ray spectroscopies
 \cite{Greczynski20}.
 Another relevant and interesting process is the family of Interparticle
@@ -101,7 +105,10 @@ of electronic decay processes, that
 can lead to rule of thumbs, which do not require expensive lifetime
 calculations will
 be helpful for the interpretation of the observed spectra.
-This article aims to provide such a rule of thumb for relative decay widths
+This article aims to provide such a rule of thumb for relative
+%\textcolor{blue}
+{Auger-Meitner}
+decay widths
 of initial states split by spin-orbit coupling.
 In the following, we will assume processes initiated by ionization.
 
@@ -149,9 +156,12 @@ solutions. Therefore, as a rule of thumb, $s$ and $p$ are spatially contracted w
 $d$ and $f$ orbitals are spatially decontrated. \cite{ReiherWolf09}.
 
 The initial and final state energies can be obtained using      
-a variety of quantum chemical approaches known in the literature as the       
-Algebraic Diagrammatic Construction \cite{Schirmer82_1,Schirmer91,Schirmer98, 
-Mertins96_1} (ADC), which is also                               
+a variety of quantum chemical approaches.
+%\textcolor{blue}
+{
+One is the literature as the       
+Algebraic Diagrammatic Construction \cite{Schirmer_book,Schirmer82_1,Schirmer83,Schirmer91,Schirmer98, 
+Mertins96_1}} (ADC), which is also                               
 available for a fully relativistic treatment                    
 \cite{Pernpointner04_1,Pernpointner04_2,Pernpointner10_1}.
 The calculation of the respective lifetimes is a challenging task, because it
@@ -172,7 +182,9 @@ basis for convenience.
 
 The quantum chemical methods, which have been developed for a relativistic
 description of the decay widths are the Multichannel Multi-Configurational
-Dirac-Fock (MMCDF) \cite{Fritzsche11} and the FanoADC-Stieltjes \cite{Fasshauer15_1}.
+Dirac-Fock (MMCDF) \cite{Fritzsche11} and the FanoADC-Stieltjes
+%\textcolor{blue}
+{\cite{Averbukh05,Fasshauer15_1}}.
 The MMCDF is limited to atomic systems and strongly depends on
 the manual selection of CI (Configuration
 Interaction) components to be included in the description of initial and      
@@ -190,7 +202,10 @@ The FanoADC-Stieltjes approach is implemented in the relativistic
 quantum chemistry package
 DIRAC \cite{DIRAC17}, which allows to use different Hamiltonians while keeping
 all other parameters constant. This allows us to computationally only consider
-scalarrelativistic effects using the spinfree Hamiltonian as well as
+scalarrelativistic effects using
+%\textcolor{blue}
+{Dyall's spinfree Hamiltonian \cite{Dyall94}}
+as well as
 performing a fully relativistic calculation using the four-component
 Dirac-Coulomb (DC) Hamiltonian taking both scalarrelativistic and
 spin-orbit coupling into account.
@@ -198,21 +213,21 @@ By comparing the results, we can extract the effect caused by spin-orbit couplin
 We therefore choose the FanoADC-Stieltjes approach for our calculations.
 
 
-In this work we focus on the atomic Meitner-Auger process     
+In this work we focus on the atomic Auger-Meitner process     
 in order                                      
 to exploit basic knowledge about the influence of relativistic effects,
-but we expect the conclusions to hold for molecular Meitner-Auger process and
+but we expect the conclusions to hold for molecular Auger-Meitner process and
 Interparticle Coulombic Decay (ICD) processes
 \cite{Cederbaum97,Marburger03,Hergenhahn11,Jahnke15} as well.
-The Meitner-Auger decay process initiated by a photoionization
+The Auger-Meitner decay process initiated by a photoionization
 can most generally be described by:
 \begin{equation*}                                               
  A \quad \xrightarrow{h\nu}\quad (A^+)^* + e^-_\text{ph} \quad       
-    \xrightarrow{\text{Meitner}} \quad A^{2+} + e^-_\text{ph} + e^-_\text{sec}     
+    \xrightarrow{\text{Auger-Meitner}} \quad A^{2+} + e^-_\text{ph} + e^-_\text{sec}     
 \end{equation*}                                                 
                                                                 
 A system $A$ is ionized, while the photo-electron $e^-_\text{ph}$ is emitted.      
-Afterwards, the actual Meitner-Auger
+Afterwards, the actual Auger-Meitner
 process of the initial state $A^+$ can occur.    
 An electron from an outer                                       
 shell fills the vacancy and the excess energy is instantaneously transferred  
@@ -220,14 +235,23 @@ to another (secondary) electron $e^-_\text{sec}$, which
 is subsequently emitted. The final state of the decay process   
 is to be described by a doubly charged atom $A^{2+}$ and the secondary        
 electron in the continuum.
+%\textcolor{blue}
+{In the special case when the vacancy filling electron or the secondary
+electron stem from an orbital
+of the same shell as the initial vacancy the process is called Coster-Kronig decay.
+When both are from the same shell, the process is referred to as super-Coster-Kronig
+decay. These Coster-Kronig decays are characterized by very large decay widths.
+\cite{Coster35} We will discuss these special cases separately from the 
+Auger Meitner process in this paper.
+}
 
 We have previously shown, how
-scalar-relativistic effects influence the decay widths of the Meitner-Auger
+scalar-relativistic effects influence the decay widths of the Auger-Meitner
 process in
 noble gas atoms. \cite{Fasshauer15_1}
 After primary ionization from the $(n-1)d$ orbitals the nobel
 gas atoms decay to $np^{-2}$, $np^{-1}ns^{-1}$ and $ns^{-2}$ final states.
-We observed that the Meitner decay widths increased by up to \unit[326]{\%}
+We observed that the Auger-Meitner decay widths increased by up to \unit[326]{\%}
 for radon
 by including scalar-relativistic effects in the calculation. This
 dramatic increase could be explained by the larger spatial
@@ -239,13 +263,19 @@ for the different $d_{3/2}^{-1}$ and $d_{5/2}^{-1}$ initial states split by
 spin-orbit coupling (see Fig.~5 of Ref.~\cite{Fasshauer15_1}).
 The aim of this work is therefore to investigate the
 influence of spin-orbit coupling on the decay widths of electronic decay processes.
-For this purpose, we will study the Meitner-Auger processes of earth alkaline atoms
+For this purpose, we will study the Auger-Meitner processes of earth alkaline atoms
 after primary ionization from the $(n-1)p$ orbitals. The earth alkaline elements
 have the benefit of a single and closed shell $ns^{-2}$ final state.
+This might allow us to purely observe how the spin-orbit splitting of
+the different initial states affects the Auger-Meitner decay width.
+%\textcolor{blue}
+{
+Moreover, in the single particle picture, a Coster-Kronig decay is possible for neither
+of the initial states and thus the pure Auger-Meitner process, where the initial
+states have an equal number of possible decay channels, can be observed.
+}
 Having only one final state, which is not affected by spin-orbit coupling,
 reduces the complexity of the analysis of the results significantly.
-This might allow us to purely observe how the spin-orbit splitting of
-the different initial states affects the Meitner decay width.
 
 The paper is structured as follows:
 in section \ref{section:theory} we recapitulate the basics of the
@@ -258,6 +288,7 @@ and conclude in section \ref{section:conclusions}.
 %%%%%%%%%  Theory
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\input{theory}
+
 \section{Theory}
 \label{section:theory}
 
@@ -361,7 +392,7 @@ and \cite{Fasshauer_thesis}.
 %\input{computational}
 \section{Computational Details}
 \label{section:computational}
-The Meitner-Auger
+The Auger-Meitner
 decay widths were calculated with the relativistic FanoADC-Stieltjes
 method
 implemented in the relativistic quantum chemical program DIRAC \cite{DIRAC17}.
@@ -377,7 +408,9 @@ basis functions following the Kaufmann-Baumeister-Jungen approach
 \cite{Kaufmann89}.
 The resulting moments were checked for numerical instabilities.
 Only those moments, without numerical instabilities entered the interpolation
-scheme for the determination of the decay widths.\\
+scheme for the determination of the decay widths
+%\textcolor{blue}
+{as described in Ref. \cite{Fasshauer15_1}}.\\
 The radial orbital densities of the ions were calculated using GRASP
 \cite{Dyall89,Parpia96}.
 
@@ -390,7 +423,7 @@ The radial orbital densities of the ions were calculated using GRASP
 
 In order to analyze the decay processes, we first discuss the energetic
 accessibility of different decay channels and then present the corresponding
-Meitner decay widths.
+Auger-Meitner decay widths.
 In Fig. \ref{fig:sdip} we present the computed
 single and double ionization spectra
 of strontium obtained by DC-ADC calculations. The main peaks of the
@@ -398,7 +431,9 @@ ionization
 from the Sr$4p_{3/2}$ and the Sr$4p_{1/2}$ have single ionization potentials (SIPs)
 of \unit[28.277]{eV} and \unit[29.402]{eV}, respectively. The experimental
 values of \unit[28.21]{eV} and \unit[29.17]{eV} are very close and
-varify the applicability
+%\textcolor{blue}
+{verify}
+the applicability
 of the chosen method \cite{Schmitz76}.
 They are characterized by pole-strengths, which in this implementation
 is defined as
@@ -409,13 +444,14 @@ configurations and analyze them in detail later.
 These two single ionization energies are higher
 than only one double ionization potential (DIP) of \unit[16.430]{eV},
 which is to \unit[99.7]{\%} characterized by the double ionization from
-the $5s$ valence. The Meitner process is therefore energetically accessible and
+the $5s$ valence. The Auger-Meitner process is therefore energetically accessible and
 results in a single final state.
 For radium the spectra are qualitatively the same and
 lead to the same conclusion.
 
 \begin{figure}[h]
  \centering
+ %\includegraphics[width=\columnwidth]{pics/Sr_rel_sdip.pdf}
  \includegraphics[width=\columnwidth]{Sr_rel_sdip.pdf}
  \caption{Comparison of the single (SIP) and double (DIP) ionization spectra
           of the strontium obtained by a DC-ADC calculation.}
@@ -426,7 +462,7 @@ lead to the same conclusion.
 \begin{table}[htb]
  \centering
  \caption{Ionization energies, pole-strengths (ps) and decay widths $\Gamma$ of
-          different Meitner initial states of strontium and radium obtained
+          different Auger-Meitner initial states of strontium and radium obtained
           by relativistic FanoADC-Stieltjes calculations.}
  \begin{tabular}{lrrr}
   \toprule
@@ -456,11 +492,8 @@ calculations in Table \ref{tab:widths}
 for the scalarrelativistic spinfree $(n-1)p^{-1}$ as well as the
 fully relativistic $(n-1)p_{1/2,1/2}^{-1}$, $(n-1)p_{3/2,1/2}^{-1}$ and
 $(n-1)p_{3/2,3/2}^{-1}$ initial states. They are illustrated in Fig. \ref{fig:gamma}.
-To the best of my knowledge, the Meitner decay widths of these systems have
+To the best of my knowledge, the Auger-Meitner decay widths of these systems have
 not been presented in the literature so far.
-%, even though xyz compare their
-%radiative lifetimes to Meitner widths, which they seem to have gained
-%from private communication with xyz \cite{}.
 
 Despite the difference in absolute numbers, the decay widths
 of the different initial states show the same pattern. The decay width of
@@ -480,6 +513,7 @@ How can this result be understood?
 
 \begin{figure}[h]
  \centering
+ %\includegraphics[width=0.95\columnwidth]{pics/gamma_group.pdf}
  \includegraphics[width=0.95\columnwidth]{gamma_group.pdf}
  \caption{Decay widths of strontium and radium after primary ionization from
           an $(n-1)p$ orbital obtained by relativistic FanoADC-Stieltjes
@@ -504,21 +538,21 @@ Fig.~\ref{fig:radial_pure}).
 In case of the strontium atom, the radial densities of the $4p_{1/2}$ and the
 $4p_{3/2}$ orbitals are almost identical. But for the radium atom, the radial
 density of the  $6p_{1/2}$ orbital is closer to the nucleus than
-the radial density of the $6p_{3/2}$ orbital. This general property is already
-visible in the analytic solutions of the one-electron system \cite{Bethe_Salpeter}.
-Because the Meitner decay rates crucially depend on the overlap of the
+the radial density of the $6p_{3/2}$ orbital.
+%\textcolor{red}{This general property is already visible in the analytic solutions of the one-electron system \cite{Bethe_Salpeter}.}
+Because the Auger-Meitner decay rates crucially depend on the overlap of the
 involved orbitals, the decay widths of an $(n-1)p_{3/2}^{-1}$ initial state
 can be expected to be higher than the decay widths of an $(n-1)p_{1/2}^{-1}$
 initial state. These findings are reflected in the decay widths shown in
 Fig.~\ref{fig:gamma} and Table \ref{tab:widths} and are consistent with the
-observations of the noble gas Meitner processes in Ref. \cite{Fasshauer15_1}.
+observations of the noble gas Auger-Meitner processes in Ref. \cite{Fasshauer15_1}.
 
 
 %\input{rad_expect}
 \begin{table}[h]
  \centering
  \caption{Radial expectation values $\langle r \rangle$ of
-          orbitals involved in the Meitner process
+          orbitals involved in the Auger-Meitner process
           for different configurations
           given in {\AA}ngstr{\"o}m.
 }
@@ -538,10 +572,12 @@ observations of the noble gas Meitner processes in Ref. \cite{Fasshauer15_1}.
 \begin{figure}[h]
  \centering
  \includegraphics[width=\columnwidth]{sr_ion_R.pdf}\\
+ %\includegraphics[width=\columnwidth]{pics/sr_ion_R.pdf}\\
  %\includegraphics[width=\columnwidth]{pics/ba_ion_R.pdf}\\
  \includegraphics[width=\columnwidth]{ra_ion_R.pdf}\\
+ %\includegraphics[width=\columnwidth]{pics/ra_ion_R.pdf}\\
  \caption{Radial densities of the orbitals of the $(n-1)p^5s^2$ ions
-          involved in the Meitner decay.
+          involved in the Auger-Meitner decay.
           The expectation value of the electrons position of the $(n-1)p_{1/2}$
           orbital is lower than of the respective $(n-1)p_{3/2}$
           orbitals. The $ns$ orbitals of the ions experience a stronger
@@ -549,10 +585,10 @@ observations of the noble gas Meitner processes in Ref. \cite{Fasshauer15_1}.
  \label{fig:radial_pure}
 \end{figure}
 
-However, the simulations of Meitner-Auger processes in other earthalkaline elements
+However, the simulations of Auger-Meitner processes in other earthalkaline elements
 have shown that correlation effects are important for the correct
 description of these elements' decay widths. Both the investigations of
-the Meitner process following primary ionization
+the Auger-Meitner process following primary ionization
 from the $2p$ orbitals of calcium \cite{Nikkinen05}
 as well as from the $4d$ orbitals of barium \cite{Rose80}
 showed the necessity to include excitations from the valence $s$ orbital to
@@ -563,6 +599,9 @@ simulations:
  $(n-1)p^{-1} \,ns^2$,
  $(n-1)p^{-1} \,(n-1)d \, ns$ and
  $(n-1)p^{-1} \,(n-1)d^2$ .    
+%\textcolor{blue}
+{Thereby, a fast Coster-Kronig decay is enabled equally for both the $l-1/2$ as
+well as the $l+1/2$ case.}
 
 Indeed, the analysis of the ADC eigenvectors of the initial states of both
 strontium and radium showed
@@ -570,7 +609,13 @@ that beyond the single and main $1h$ contribution of the respective $p$ orbital,
 initial state is mainly characterized by $2h1p$ configurations of the
 $(n-1)p^{-1} \,ns \, (n-1)d$ kind. They
 are therefore automatically included in our simulations.
-The FanoADC-Stieltjes approach is, however, limited
+The
+%\textcolor{blue}
+{relativistic}
+FanoADC-Stieltjes
+%\textcolor{blue}
+{implementation}
+is, however, limited
 to second order perturbations in the wavefunction
 and therefore does not go beyond $2h1p$ configurations. This means that the
 $(n-1)p^{-1} \,(n-1)d^2$ configurations are not taken into account in this work.
@@ -584,7 +629,7 @@ configuration, while the $7s$ orbital is slightly decontracted by a difference
 of the electron's distance from the nucleus $\Delta \langle r \rangle$
 of \unit[0.046]{\AA}.
 However, the $6d$ orbitals, which are involved
-in the Meitner process of this configuration, show a large overlap with both
+in the Auger-Meitner process of this configuration, show a large overlap with both
 the $6p$ and the $7s$ orbitals. The corresponding decay width should therefore
 be larger than the decay width of the $6p^{-1} \,7s^2$ configuration.
 The prevalence of the $(n-1)p_{3/2}$ decay width over the $(n-1)p_{1/2}$
@@ -596,9 +641,10 @@ lower bounds to the results of a more accurate decay width calculation.
 
 \begin{figure}[h]
  \centering
+ %\includegraphics[width=\columnwidth]{pics/ra_6d_R.pdf}
  \includegraphics[width=\columnwidth]{ra_6d_R.pdf}
  \caption{Radial densities of the radium orbitals of the ionic $6p^5 6d 7s$
-          configuration involved in the Meitner decay. The overlap of the radial
+          configuration involved in the Auger-Meitner decay. The overlap of the radial
           densities of the $6p$ orbitals with the radial densities of the $6d$ orbitals
           is more pronounced than with the radial density of the $7s$ orbital.}
  \label{fig:radial_ra}
@@ -630,13 +676,13 @@ $6p_{1/2}$ and $6p_{3/2}$ initial states to spin-orbit splitting alone.
 However, the initial state determined with the spinfree
 Hamiltonian has a pole-strength comparable to the $6p_{3/2}$ initial states,
 but the decay width of the $6p_{3/2}$ initial state is increased by \unit[236]{\%}
-compared to the spinfree result and therefore
-significantly lower.
+compared to the spinfree result.
 Hence, we can explain the increase of the decay width from the spinfree to the
 $6p_{3/2}$ initial state by spin-orbit coupling.
 
+
 Based on these consistent findings, we can formulate the following rule of thumb for
-the relative Meitner decay widths:\\
+the relative Auger-Meitner decay widths:\\
 Two ionized initial states that stem from the same non-relativistic configuration and
 are split by spin-orbit coupling will have different decay widths, where the decay width
 of the $l-\frac12$ initial state will be significantly lower than the decay width of
@@ -647,18 +693,124 @@ $l-\frac12$ will always be contracted more strongly than the corresponding
 $l+\frac12$ orbital and the final state orbitals will be further away from
 the nucleus than the initial state orbitals.
 
-We can also expect this rule of thumbs to extent to ICD and
+%\textcolor{blue}
+{
+%\input{tab_L}
+\begin{table*}[htb]
+ \caption{Auger-Meitner (AM) decay widths and Coster-Kronig (CK) widths
+          of $L_2$ and $L_3$ shells in \unit{eV} extracted from
+          Ref. \cite{Chen81}.}
+ \begin{tabular}{ccrrr}
+ \toprule
+ Z & Element & $\Gamma_\text{AM}(L_2)$ & $\Gamma_\text{AM+CK}(L_2)$ & $\Gamma_\text{AM}(L_3)$\\
+ \midrule
+ 25 & Mn & 0.390 &  --   & 0.337 \\
+ 30 & Zn & 0.664 &  --   & 0.689 \\
+ 36 & Kr & 1.101 & 1.219 & 1.167 \\
+ 40 & Zr & 1.373 & 1.578 & 1.465 \\
+ 45 & Rh & 1.705 & 2.029 & 1.860 \\
+ 47 & Ag & 1.832 & 2.192 & 2.028 \\
+ 50 & Sn & 2.016 & 2.454 & 2.256 \\
+ 52 & Te & 2.128 & 2.614 & 2.406 \\
+ 54 & Xe & 2.236 & 2.767 & 2.557 \\
+ 56 & Ba & 2.336 & 2.912 & 2.696 \\
+ 60 & Nd & 2.456 & 3.060 & 2.897 \\
+ 63 & Eu & 2.534 & 3.146 & 3.041 \\
+ 67 & Ho & 2.611 & 3.233 & 3.211 \\
+ 70 & Yb & 2.662 & 3.285 & 3.340 \\
+ 74 & W  & 2.753 & 3.423 & 3.543 \\
+ 80 & Hg & 2.877 & 3.600 & 3.878 \\
+ 90 & Th & 3.060 & 3.877 & 4.464 \\
+ 92 & U  & 3.082 & 4.272 & 4.571 \\
+ 96 & Cm & 3.126 & 5.386 & 4.805 \\
+ 98 & Cf & 3.146 & 5.360 & 4.934 \\
+100 & Fm & 3.168 & 5.586 & 5.060 \\
+ \bottomrule
+ \end{tabular}
+ \label{tab:L}
+\end{table*}
+The question is whether this rule of thumb is applicable to the Auger-Meitner
+processes of other elements. For this, we refer to the Auger-Meitner and
+Coster-Kronig decay widths of $L$ and $M$ initial states extracted from Refs.
+\cite{Chen81,Chen83,Chen80} and presented in Tables \ref{tab:L} -- \ref{tab:M45}.
+We note that this data is limited to comparably heavy elements as simulations
+of Auger-Meitner decay widths based on relativistic wavefunctions are unavailable
+in the literature for lighter elements.\\
+%\input{tab_M}
+\begin{table*}[h]
+ \caption{Auger-Meitner (AM) decay widths and Coster-Kronig (CK) widths
+          of $M_2$ and $M_3$ shells in \unit{eV} extracted from
+          Ref. \cite{Chen83}.}
+ \begin{tabular}{ccrrrr}
+ \toprule
+ Z & Element & $\Gamma_\text{AM}(M_2)$ & $\Gamma_\text{AM+CK}(M_2)$ & $\Gamma_\text{AM}(M_3)$ & $\Gamma_\text{AM+CK}(M_3)$ \\
+ \midrule
+ 67 & Ho &  0.687 &  9.484 & 0.977 &  9.823\\
+ 70 & Yb &  0.277 & 10.259 & 1.125 &  9.949 \\
+ 74 & W  &  0.839 & 11.870 & 1.342 & 10.529 \\
+ 78 & Pt &  1.257 & 13.148 & 1.569 &  9.735 \\
+ 80 & Hg &  1.313 & 13.580 & 1.673 & 10.166 \\
+ 85 & At &  1.403 & 13.597 & 1.990 & 10.879 \\
+ 88 & Ra &  1.634 & 14.169 & 2.170 & 10.667 \\
+ 90 & Th &  1.650 & 14.404 & 2.264 &  9.973 \\
+ 92 & U  &  1.727 & 14.557 & 2.375 & 10.235 \\
+ 95 & Am &  1.836 & 15.130 & 2.629 & 10.850 \\
+ \bottomrule
+ \end{tabular}
+ \label{tab:M}
+\end{table*}
+It is readily seen that the formulated rule of thumb holds for the Auger-Meitner
+for all cases but one. The latter is the Auger-Meitner process of manganese after
+primary ionization of a $2p$ orbital (see Table \ref{tab:L}).
+However, the rule of thumb is not correct, when Coster-Kronig processes contribute
+unequally to the decay of the $l+1/2$ and $l-1/2$ initial states.
+The $L3$ and the $M5$ initial states are unable to undergo a Coster-Kronig decay
+and they, as well as the $M3$ initial state have one fast decay channel than their
+$l-1/2$ counterpart.
+One may expect a clear trend for the relative decay widths with the nuclear charge
+$Z$, but this hypothesis is not backed up by the data.
+%\input{tab_M45}
+\begin{table*}[ht]
+ \caption{Auger-Meitner (AM) decay widths and Coster-Kronig (CK) widths
+          of $M_4$ and $M_5$ shells
+          in \unit{eV} extracted from
+          Ref. \cite{Chen80}.}
+ \begin{tabular}{ccrrr}
+ \toprule
+ Z & Element & $\Gamma_\text{AM}(M_4)$ & $\Gamma_\text{AM+CK}(M_4)$ & $\Gamma_\text{AM}(M_5)$\\
+ \midrule
+ 70 & Yb & 1.408 & 2.445 & 1.460 \\
+ 74 & W  & 1.758 & 1.831 & 1.830 \\
+ 80 & Hg & 2.259 & 2.381 & 2.452 \\
+ 83 & Bi & 2.512 & 2.670 & 2.753 \\
+ 88 & Ra & 2.923 & 3.126 & 3.253 \\
+ 92 & U  & 3.203 & 3.528 & 3.611 \\
+ 96 & Cm & 3.646 & 4.089 & 4.075 \\
+100 & Fm & 4.000 & 4.488 & 4.583 \\
+ \bottomrule
+ \end{tabular}
+ \label{tab:M45}
+\end{table*}
+}
+
+%\textcolor{blue}
+{Based on the above reasoning, one would also expect}
+this rule of thumb to extend to ICD and
 Electron Transfer Mediated Decay (ETMD) processes as well. The ICD
 decay widths partly depend on the transition dipole moment between the
 initial and final state of the initially ionized unit, which in return increases
 with the overlap of the electron densities of the involved orbitals.
 The ETMD decay widths are determind by the orbital overlap of two different units,
 which is larger for orbitals further away from the nucleus.
-Hence the same argumentation as for the Meitner-Auger process is valid in both
-cases.
+Hence the same argumentation as for the Auger-Meitner process
+%\textcolor{blue}
+{should be possible}
+in both cases.
+%\textcolor{blue}
+{A validation will be left for future work.}
 
 %We conclude that the spin-orbit coupling does affect
-%the Meitner decay widths, even though it is not the only factor for the
+%the Auger-Meitner decay widths, even though it is not the only factor for the
 %earth alkaline atoms.
 
 
@@ -671,11 +823,11 @@ cases.
 \label{section:conclusions}
 
 We have presented lower bounds for
-decay widths for the Meitner process initiated by
+decay widths for the Auger-Meitner process initiated by
 ionization from the $(n-1)p$ orbitals of strontium and radium.
 Through analysis of results from different Hamiltonians and initial state
 eigenvectors as well as radial densities of orbitals involved in the
-Meitner process, we were able to show the importance of configuration interaction
+Auger-Meitner process, we were able to show the importance of configuration interaction
 in this specific case and the effect of spin-orbit coupling on decay widths
 of electronic decay processes in general.
 We condensed our findings into the following rule of thumb for the decay widths
@@ -684,6 +836,10 @@ Two ionized initial states that stem from the same non-relativistic configuratio
 are split by spin-orbit coupling will have different decay widths, where the decay width
 of the $l-\frac12$ initial state will be significantly lower than the decay width of
 the $l + \frac12$ initial state.
+%\textcolor{blue}
+{We have tested this rule of thumb against Auger-Meitner decay widths available in the
+literature and could thereby validate it for the majority
+of cases.}
 
 %\input{ack}
 \section{Acknowledgements}
@@ -693,7 +849,382 @@ and acknowledges funding from the Villum foundation.
 
 \clearpage
 
-\bibliographystyle{apsrev4-1}
-\bibliography{theolit}
+%\bibliographystyle{apsrev4-1}
+%\bibliography{theolit}
+
+
+\begin{thebibliography}{50}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Meitner}(1922)}]{Meitner22}
+\bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Meitner}}, \bibinfo{journal}{Z.
+  Phys.} \textbf{\bibinfo{volume}{9}}, \bibinfo{pages}{131}
+  (\bibinfo{year}{1922}).
+
+\bibitem[{\citenamefont{Auger}(1923)}]{Auger23}
+\bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Auger}}, \bibinfo{journal}{C.
+  R. Acad. Sci.} \textbf{\bibinfo{volume}{177}}, \bibinfo{pages}{169}
+  (\bibinfo{year}{1923}).
+
+\bibitem[{\citenamefont{Matsakis et~al.}(2019)\citenamefont{Matsakis, Coster,
+  Laster, and Sime}}]{renameAuger19}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Matsakis}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Coster}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Laster}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Sime}},
+  \bibinfo{journal}{Phys. Today} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{10} (\bibinfo{year}{2019}).
+
+\bibitem[{\citenamefont{Seah}(1986)}]{AES_Seah_86}
+\bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{Seah}},
+  \emph{\bibinfo{title}{Microscopic Methods in Metals}}
+  (\bibinfo{publisher}{Springer, Berlin, Heidelberg}, \bibinfo{year}{1986}),
+  vol.~\bibinfo{volume}{40} of \emph{\bibinfo{series}{Topics in Current
+  Physics}}, chap. \bibinfo{chapter}{Auger Electron Spectroscopy}.
+
+\bibitem[{\citenamefont{Drescher et~al.}(2002)\citenamefont{Drescher,
+  Hentschel, Kienberger, Uiberacker, Yakovlev, Scrinzi, Westerwalbesloh,
+  Kleineberg, Heinzmann, and Krausz}}]{Drescher02}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Drescher}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Hentschel}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Kienberger}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Uiberacker}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Yakovlev}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Scrinzi}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Westerwalbesloh}},
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Kleineberg}},
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Heinzmann}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Krausz}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{419}},
+  \bibinfo{pages}{803} (\bibinfo{year}{2002}),
+  \urlprefix\url{https://doi.org/10.1038/nature01143}.
+
+\bibitem[{\citenamefont{Smirnova et~al.}(2003)\citenamefont{Smirnova, Yakovlev,
+  and Scrinzi}}]{Smirnova03}
+\bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Smirnova}},
+  \bibinfo{author}{\bibfnamefont{V.~S.} \bibnamefont{Yakovlev}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Scrinzi}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{91}},
+  \bibinfo{pages}{253001} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Greczynski and Hultman}(2020)}]{Greczynski20}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Greczynski}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Hultman}},
+  \bibinfo{journal}{Mat. Sci.} \textbf{\bibinfo{volume}{107}},
+  \bibinfo{pages}{100591} (\bibinfo{year}{2020}).
+
+\bibitem[{\citenamefont{Cederbaum et~al.}(1997)\citenamefont{Cederbaum,
+  Zobeley, and Tarantelli}}]{Cederbaum97}
+\bibinfo{author}{\bibfnamefont{L.~S.} \bibnamefont{Cederbaum}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Zobeley}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Tarantelli}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{79}},
+  \bibinfo{pages}{4778} (\bibinfo{year}{1997}).
+
+\bibitem[{\citenamefont{Hergenhahn}(2011)}]{Hergenhahn11}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Hergenhahn}},
+  \bibinfo{journal}{J. Electron Spectrosc. Relat. Phenom.}
+  \textbf{\bibinfo{volume}{184}}, \bibinfo{pages}{78} (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Jahnke}(2015)}]{Jahnke15}
+\bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Jahnke}}, \bibinfo{journal}{J.
+  Phys. B: Atomic, Molecular and Optical Physics}
+  \textbf{\bibinfo{volume}{48}}, \bibinfo{pages}{082001}
+  (\bibinfo{year}{2015}).
+
+\bibitem[{\citenamefont{Reiher and Wolf}(2009)}]{ReiherWolf09}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Reiher}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Wolf}},
+  \emph{\bibinfo{title}{Relativistic Quantum Chemistry}}
+  (\bibinfo{publisher}{Wiley-VCH Verlag GmbH}, \bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Schirmer}(2018)}]{Schirmer_book}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \emph{\bibinfo{title}{Many-Body Methods for Atoms, Molecules and Clusters}},
+  Lecture Notes in Chemistry (\bibinfo{publisher}{Springer Nature Switzerland
+  AG}, \bibinfo{year}{2018}).
+
+\bibitem[{\citenamefont{Schirmer}(1982)}]{Schirmer82_1}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{26}},
+  \bibinfo{pages}{2395} (\bibinfo{year}{1982}).
+
+\bibitem[{\citenamefont{Schirmer et~al.}(1983)\citenamefont{Schirmer,
+  Cederbaum, and Walter}}]{Schirmer83}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{author}{\bibfnamefont{L.~S.} \bibnamefont{Cederbaum}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Walter}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{28}},
+  \bibinfo{pages}{1237} (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Schirmer}(1991)}]{Schirmer91}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{43}},
+  \bibinfo{pages}{4647} (\bibinfo{year}{1991}).
+
+\bibitem[{\citenamefont{Schirmer et~al.}(1998)\citenamefont{Schirmer, Trofimov,
+  and Stelter}}]{Schirmer98}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{author}{\bibfnamefont{A.~B.} \bibnamefont{Trofimov}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Stelter}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{109}},
+  \bibinfo{pages}{4734} (\bibinfo{year}{1998}).
+
+\bibitem[{\citenamefont{Mertins and Schirmer}(1996)}]{Mertins96_1}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Mertins}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{53}},
+  \bibinfo{pages}{2140} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Pernpointner and Trofimov}(2004)}]{Pernpointner04_1}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Pernpointner}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.~B.}
+  \bibnamefont{Trofimov}}, \bibinfo{journal}{J. Chem. Phys.}
+  \textbf{\bibinfo{volume}{120}}, \bibinfo{pages}{4098} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Pernpointner}(2004)}]{Pernpointner04_2}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Pernpointner}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{121}},
+  \bibinfo{pages}{8782} (\bibinfo{year}{2004}).
+
+\bibitem[{\citenamefont{Pernpointner}(2010)}]{Pernpointner10_1}
+\bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Pernpointner}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{43}},
+  \bibinfo{pages}{205102} (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Fritzsche et~al.}(2011)\citenamefont{Fritzsche,
+  Grum-Grzhimailo, Gryzlova, and Kabachnik}}]{Fritzsche11}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Fritzsche}},
+  \bibinfo{author}{\bibfnamefont{A.~N.} \bibnamefont{Grum-Grzhimailo}},
+  \bibinfo{author}{\bibfnamefont{E.~V.} \bibnamefont{Gryzlova}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.~M.}
+  \bibnamefont{Kabachnik}}, \bibinfo{journal}{J. Phys. B}
+  \textbf{\bibinfo{volume}{44}}, \bibinfo{pages}{175602}
+  (\bibinfo{year}{2011}).
+
+\bibitem[{\citenamefont{Averbukh and Cederbaum}(2005)}]{Averbukh05}
+\bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Averbukh}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~S.} \bibnamefont{Cederbaum}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{123}},
+  \bibinfo{pages}{204107} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Fasshauer et~al.}(2015)\citenamefont{Fasshauer,
+  Koloren\ifmmode~\check{c}\else \v{c}\fi{}, and Pernpointner}}]{Fasshauer15_1}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Fasshauer}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Koloren\ifmmode~\check{c}\else
+  \v{c}\fi{}}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Pernpointner}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{142}},
+  \bibinfo{pages}{144106} (\bibinfo{year}{2015}).
+
+\bibitem[{DIR()}]{DIRAC17}
+\bibinfo{note}{{DIRAC}, a relativistic ab initio electronic structure program,
+  Release {DIRAC17} (2017), written by L.~Visscher, H.~J.~{\relax Aa}.~Jensen,
+  R.~Bast, and T.~Saue, with contributions from V.~Bakken, K.~G.~Dyall,
+  S.~Dubillard, U.~Ekstr{\"o}m, E.~Eliav, T.~Enevoldsen, E.~Fa{\ss}hauer,
+  T.~Fleig, O.~Fossgaard, A.~S.~P.~Gomes, E.~D.~Hedeg{\aa}rd, T.~Helgaker,
+  J.~Henriksson, M.~Ilia{\v{s}}, Ch.~R.~Jacob, S.~Knecht, S.~Komorovsk{\'y},
+  O.~Kullie, J.~K.~L{\ae}rdahl, C.~V.~Larsen, Y.~S.~Lee, H.~S.~Nataraj,
+  M.~K.~Nayak, P.~Norman, G.~Olejniczak, J.~Olsen, J.~M.~H.~Olsen, Y.~C.~Park,
+  J.~K.~Pedersen, M.~Pernpointner, R.~di~Remigio, K.~Ruud, P.~Sa{\l}ek,
+  B.~Schimmelpfennig, A.~Shee, J.~Sikkema, A.~J.~Thorvaldsen, J.~Thyssen,
+  J.~van~Stralen, S.~Villaume, O.~Visser, T.~Winther, and S.~Yamamoto (see
+  http://www.diracprogram.org)}.
+
+\bibitem[{\citenamefont{Dyall}(1994)}]{Dyall94}
+\bibinfo{author}{\bibfnamefont{K.~G.} \bibnamefont{Dyall}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{100}},
+  \bibinfo{pages}{2118} (\bibinfo{year}{1994}).
+
+\bibitem[{\citenamefont{Marburger et~al.}(2003)\citenamefont{Marburger,
+  Kugeler, Hergenhahn, and M{\"o}ller}}]{Marburger03}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Marburger}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Kugeler}},
+  \bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Hergenhahn}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{M{\"o}ller}},
+  \bibinfo{journal}{Phys. Rev. Lett.} \textbf{\bibinfo{volume}{90}},
+  \bibinfo{eid}{4} (\bibinfo{year}{2003}).
+
+\bibitem[{\citenamefont{Coster and Kronig}(1935)}]{Coster35}
+\bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Coster}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~D.~L.} \bibnamefont{Kronig}},
+  \bibinfo{journal}{Physica} \textbf{\bibinfo{volume}{2}}, \bibinfo{pages}{13}
+  (\bibinfo{year}{1935}).
+
+\bibitem[{\citenamefont{Wentzel}(1927)}]{Wentzel27}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Wentzel}}, \bibinfo{journal}{Z.
+  Physik} \textbf{\bibinfo{volume}{43}}, \bibinfo{pages}{524}
+  (\bibinfo{year}{1927}).
+
+\bibitem[{\citenamefont{Feshbach}(1958)}]{Feshbach58}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Feshbach}},
+  \bibinfo{journal}{Ann. Phys.} \textbf{\bibinfo{volume}{5}},
+  \bibinfo{pages}{357} (\bibinfo{year}{1958}).
+
+\bibitem[{\citenamefont{Feshbach}(1962)}]{Feshbach62}
+\bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Feshbach}},
+  \bibinfo{journal}{Ann. Phys.} \textbf{\bibinfo{volume}{19}},
+  \bibinfo{pages}{287} (\bibinfo{year}{1962}).
+
+\bibitem[{\citenamefont{Fano}(1961)}]{Fano61}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Fano}}, \bibinfo{journal}{Phys.
+  Rev.} \textbf{\bibinfo{volume}{124}}, \bibinfo{pages}{1866}
+  (\bibinfo{year}{1961}).
+
+\bibitem[{\citenamefont{Craigie et~al.}(2014)\citenamefont{Craigie, Hammad,
+  Cooper, and Averbukh}}]{Craigie14}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Craigie}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Hammad}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Cooper}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Averbukh}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{141}},
+  \bibinfo{pages}{014105} (\bibinfo{year}{2014}).
+
+\bibitem[{\citenamefont{Hazi}(1978)}]{hazi1978}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Hazi}}, \bibinfo{journal}{J.
+  Phys. B} \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{L259}
+  (\bibinfo{year}{1978}).
+
+\bibitem[{\citenamefont{Langhoff et~al.}(1976)\citenamefont{Langhoff, Corcoran,
+  Sims, and Glover}}]{Langhoff76}
+\bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Langhoff}},
+  \bibinfo{author}{\bibfnamefont{C.~T.} \bibnamefont{Corcoran}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Sims},
+  \bibfnamefont{J.~S.~Weinhold}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~M.} \bibnamefont{Glover}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{14}},
+  \bibinfo{pages}{1042} (\bibinfo{year}{1976}).
+
+\bibitem[{\citenamefont{Corcoran and Langhoff}(1977)}]{Corcoran77}
+\bibinfo{author}{\bibfnamefont{C.~T.} \bibnamefont{Corcoran}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.~W.} \bibnamefont{Langhoff}},
+  \bibinfo{journal}{J. Math. Phys.} \textbf{\bibinfo{volume}{18}},
+  \bibinfo{pages}{651} (\bibinfo{year}{1977}).
+
+\bibitem[{\citenamefont{M{\"u}ller-Plathe and
+  Diercksen}(1990)}]{MuellerPlathe90}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{M{\"u}ller-Plathe}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{G.~H.~F.}
+  \bibnamefont{Diercksen}}, in \emph{\bibinfo{booktitle}{Electronic Structure
+  of Atoms, Molecules and Solids}} (\bibinfo{publisher}{Kluwer Academic
+  Publishers}, \bibinfo{year}{1990}).
+
+\bibitem[{\citenamefont{Reinhardt}(1979)}]{Reinhardt79}
+\bibinfo{author}{\bibfnamefont{W.~P.} \bibnamefont{Reinhardt}},
+  \bibinfo{journal}{Comp. Phys. Comm.} \textbf{\bibinfo{volume}{17}},
+  \bibinfo{pages}{1} (\bibinfo{year}{1979}).
+
+\bibitem[{\citenamefont{Fasshauer}(2014)}]{Fasshauer_thesis}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Fasshauer}}, Ph.D. thesis,
+  \bibinfo{school}{University of Heidelberg} (\bibinfo{year}{2014}),
+  \urlprefix\url{http://diracprogram.org/doku.php?id=dissertations}.
+
+\bibitem[{\citenamefont{Dyall}(2009)}]{Dyall4s-7s09}
+\bibinfo{author}{\bibfnamefont{K.~G.} \bibnamefont{Dyall}},
+  \bibinfo{journal}{J. Phys. Chem. A} \textbf{\bibinfo{volume}{113}},
+  \bibinfo{pages}{12638} (\bibinfo{year}{2009}).
+
+\bibitem[{\citenamefont{Kaufmann et~al.}(1989)\citenamefont{Kaufmann,
+  Baumeister, and Jungen}}]{Kaufmann89}
+\bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Kaufmann}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Baumeister}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Jungen}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{22}},
+  \bibinfo{pages}{2223} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Dyall et~al.}(1989)\citenamefont{Dyall, Grant, Parpia,
+  and Plummer}}]{Dyall89}
+\bibinfo{author}{\bibfnamefont{K.~G.} \bibnamefont{Dyall}},
+  \bibinfo{author}{\bibfnamefont{I.~P.} \bibnamefont{Grant}},
+  \bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{Parpia}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{E.~P.}
+  \bibnamefont{Plummer}}, \bibinfo{journal}{Comp. Phys. Comm.}
+  \textbf{\bibinfo{volume}{55}}, \bibinfo{pages}{425} (\bibinfo{year}{1989}).
+
+\bibitem[{\citenamefont{Parpia et~al.}(1996)\citenamefont{Parpia,
+  Froese~Fischer, and Grant}}]{Parpia96}
+\bibinfo{author}{\bibfnamefont{F.~A.} \bibnamefont{Parpia}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Froese~Fischer}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{I.~P.} \bibnamefont{Grant}},
+  \bibinfo{journal}{Comp. Phys. Comm.} \textbf{\bibinfo{volume}{94}},
+  \bibinfo{pages}{249} (\bibinfo{year}{1996}).
+
+\bibitem[{\citenamefont{Schmitz et~al.}(1976)\citenamefont{Schmitz, Breuckmann,
+  and Mehlhorn}}]{Schmitz76}
+\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Schmitz}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Breuckmann}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Mehlhorn}},
+  \bibinfo{journal}{J. Phys. B} \textbf{\bibinfo{volume}{9}},
+  \bibinfo{pages}{L493} (\bibinfo{year}{1976}).
+
+\bibitem[{\citenamefont{Trofimov and Schirmer}(2005)}]{Trofimov05}
+\bibinfo{author}{\bibfnamefont{A.~B.} \bibnamefont{Trofimov}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Schirmer}},
+  \bibinfo{journal}{The Journal of Chemical Physics}
+  \textbf{\bibinfo{volume}{123}}, \bibinfo{pages}{144115}
+  (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Bethe and Salpeter}(1977)}]{Bethe_Salpeter}
+\bibinfo{author}{\bibfnamefont{H.~A.} \bibnamefont{Bethe}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Salpeter}},
+  \emph{\bibinfo{title}{Quantum mechanics of one- and two-electron atoms}}
+  (\bibinfo{publisher}{Plenum Publ. Co., New York}, \bibinfo{year}{1977}).
+
+\bibitem[{\citenamefont{Nikkinen et~al.}(2005)\citenamefont{Nikkinen, Aksela,
+  Hein{\"a}sm{\"a}i, Kukk, Berrah, and Aksela}}]{Nikkinen05}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Nikkinen}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Aksela}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Hein{\"a}sm{\"a}i}},
+  \bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Kukk}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Berrah}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Aksela}},
+  \bibinfo{journal}{Phys. Scripta} \textbf{\bibinfo{volume}{T115}},
+  \bibinfo{pages}{119} (\bibinfo{year}{2005}).
+
+\bibitem[{\citenamefont{Rose et~al.}(1980)\citenamefont{Rose, Grant, and
+  Connerade}}]{Rose80}
+\bibinfo{author}{\bibfnamefont{S.~J.} \bibnamefont{Rose}},
+  \bibinfo{author}{\bibfnamefont{I.~P.} \bibnamefont{Grant}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Connerade}},
+  \bibinfo{journal}{Phys. Trans. Royal Soc. London}
+  \textbf{\bibinfo{volume}{296}}, \bibinfo{pages}{527} (\bibinfo{year}{1980}).
+
+\bibitem[{\citenamefont{Chen et~al.}(1981)\citenamefont{Chen, Crasemann, and
+  Mark}}]{Chen81}
+\bibinfo{author}{\bibfnamefont{M.~H.} \bibnamefont{Chen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Crasemann}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Mark}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{24}},
+  \bibinfo{pages}{177} (\bibinfo{year}{1981}).
+
+\bibitem[{\citenamefont{Chen et~al.}(1983)\citenamefont{Chen, Crasemann, and
+  Mark}}]{Chen83}
+\bibinfo{author}{\bibfnamefont{M.~H.} \bibnamefont{Chen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Crasemann}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Mark}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{27}},
+  \bibinfo{pages}{2989} (\bibinfo{year}{1983}).
+
+\bibitem[{\citenamefont{Chen et~al.}(1980)\citenamefont{Chen, Crasemann, and
+  Mark}}]{Chen80}
+\bibinfo{author}{\bibfnamefont{M.~H.} \bibnamefont{Chen}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Crasemann}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Mark}},
+  \bibinfo{journal}{Phys. Rev. A} \textbf{\bibinfo{volume}{21}},
+  \bibinfo{pages}{449} (\bibinfo{year}{1980}).
+
+\end{thebibliography}
 
 \end{document}
