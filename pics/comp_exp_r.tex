@@ -1,0 +1,91 @@
+\begin{tikzpicture}[scale=1.0]
+
+\begin{axis}[%scale=1.5,
+             domain=1:120,
+             %restrict expr to domain={x}{0:2.5},
+             %restrict expr to domain={y}{1.0E-12:7},
+             xlabel={$Z$},
+             %xtick={30,50,...,170},
+             %xticklabels={2,4,6,8,10,12,15,20,25},
+             %ytick={-1.0,-0.8,...,1.0},
+             %yticklabels={1.0,0.8,0.6,0.4,0.2,0.0,0.2,0.4,0.6,0.8,1.0},
+             ylabel={$\braket{r}_{l+1/2} - \braket{r}_{l-1/2}$ [\AA]},
+             scale only axis,
+             width=12cm,
+             height=8cm,
+             xmin = 1,
+             xmax = 118,
+             ymin = 0,
+             %ybar stacked
+             cycle list name = diplom,
+             %cycle list name = exotic,
+             legend cell align=right,
+             axis line style = very thick,
+             tick style = very thick
+             ]
+
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= (\thisrowno{0}),
+         y expr={0.529 * (\thisrowno{2} - \thisrowno{1}) / 2 / \thisrowno{0}}
+         ]
+         {../data/comp2p.dat};
+         \addlegendentry{2$p$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= (\thisrowno{0}),
+         y expr={0.529 * (\thisrowno{2} - \thisrowno{1}) / 2 / \thisrowno{0}}
+         ]
+         {../data/comp3p.dat};
+         \addlegendentry{3$p$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= (\thisrowno{0}),
+         y expr={0.529 * (\thisrowno{2} - \thisrowno{1}) / 2 / \thisrowno{0}}
+         ]
+         {../data/comp4p.dat};
+         \addlegendentry{4$p$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= (\thisrowno{0}),
+         y expr={0.529 * (\thisrowno{2} - \thisrowno{1}) / 2 / \thisrowno{0}}
+         ]
+         {../data/comp6p.dat};
+         \addlegendentry{6$p$};
+
+\addplot+[
+         mark=none,
+         %color=diplom1,
+         very thick
+         ]
+         table[
+         x expr= (\thisrowno{0}),
+         y expr={0.529 * (\thisrowno{2} - \thisrowno{1}) / 2 / \thisrowno{0}}
+         ]
+         {../data/comp3d.dat};
+         \addlegendentry{3$d$};
+
+
+
+\end{axis}
+\end{tikzpicture}

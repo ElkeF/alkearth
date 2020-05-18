@@ -1,0 +1,49 @@
+\begin{tikzpicture}
+%\begin{axis}[
+\begin{groupplot}[
+     group style = {group size = 1 by 2, vertical sep=1.5cm},
+     %enlargelimits=0.15,
+     height = 7cm,
+     width = 12cm,
+     legend style={at={(0.5,-0.20)},
+       anchor=north,legend columns=-1},
+     xlabel={contributions},
+     symbolic y coords={Sr spinfree,Sr $p_{1/2}$,Sr $p_{3/2,1/2}$,Sr $p_{3/2,3/2}$,
+                        Ra spinfree,Ra $p_{1/2}$,Ra $p_{3/2,1/2}$,Ra $p_{3/2,3/2}$},
+     %xtick=data,
+     %nodes near coords,
+     %nodes near coords align={horizontal},
+     enlarge y limits=0.20, %space left and right
+     axis line style = very thick,
+     tick style = very thick,
+     xbar stacked,
+     xmin = 0,
+     xmax = 1.0
+    ]
+    \nextgroupplot[xmin=0]
+    \addplot+[xbar] coordinates {(0.782,Sr spinfree) (0.798,Sr $p_{1/2}$)
+                          (0.756,Sr $p_{3/2,1/2}$) (0.756,Sr $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.050,Sr spinfree) (0.087,Sr $p_{1/2}$)
+                          (0.099,Sr $p_{3/2,1/2}$) (0.082,Sr $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.000,Sr spinfree) (0.002,Sr $p_{1/2}$)
+                          (0.002,Sr $p_{3/2,1/2}$) (0.002,Sr $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.160,Sr spinfree) (0.107,Sr $p_{1/2}$)
+                          (0.140,Sr $p_{3/2,1/2}$) (0.153,Sr $p_{3/2,3/2}$) };
+
+    \nextgroupplot[xmin=0]
+    \addplot+[xbar] coordinates {(0.494,Ra spinfree) (0.777,Ra $p_{1/2}$)
+                          (0.497,Ra $p_{3/2,1/2}$) (0.497,Ra $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.407,Ra spinfree) (0.011,Ra $p_{1/2}$)
+                          (0.390,Ra $p_{3/2,1/2}$) (0.391,Ra $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.005,Ra spinfree) (0.005,Ra $p_{1/2}$)
+                          (0.005,Ra $p_{3/2,1/2}$) (0.005,Ra $p_{3/2,3/2}$) };
+    \addplot+[xbar] coordinates {(0.086,Ra spinfree) (0.195,Ra $p_{1/2}$)
+                          (0.099,Ra $p_{3/2,1/2}$) (0.086,Ra $p_{3/2,3/2}$) };
+
+\legend{$(n-1)p^{-1}$,$(n-1)p^{-1}\,ns^{-1}d$,$(n-1)p^{-1}\,ns^{-1}(n-1)d$,other};
+  \end{groupplot}
+
+%\end{axis}
+\end{tikzpicture}
+
+

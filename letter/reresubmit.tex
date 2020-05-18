@@ -1,0 +1,194 @@
+\documentclass[DIN,pagenumber=false,parskip=half,fromalign=left,fromphone=false,fromemail=true,fromurl=false,fromlogo=false,fromrule=false]{scrlttr2}
+\usepackage[utf8]{inputenc}
+%\usepackage{ngerman}
+\usepackage{units}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[right]{eurosym}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{braket}
+\usepackage{url}
+%\RequirePackage{graphicx}
+
+\setkomavar{fromname}{Dr. Elke Faßhauer}
+\setkomavar{fromaddress}{Department of Physics and Astronomy\\
+                         Aarhus University\\
+                         Ny Munkegade 120\\8000 Aarhus\\Denmark}
+%\setkomavar{fromphone}{06221/545220}
+\setkomavar{fromemail}{elke.fasshauer@gmail.com}
+\setkomavar{subject}{Response to Referee Reports}
+\setkomavar{signature}{\includegraphics[height=1.5cm]{../pics/u_fasshauer.pdf} \\ Dr. Elke Faßhauer}
+
+
+\begin{document}
+\begin{letter}{To the Editor}
+	
+	\opening{Dear Editor,}
+
+I am grateful for the feedback from your referees, which I
+have taken to heart and
+used to improve the manuscript. Please find the full and detailed answers to the
+comments below.
+
+
+\textbf{Reviewer 1}
+\begin{enumerate}
+ \item \emph{Abstract - the comparison of the derived rule against database
+        should be mentioned.}\newline
+       Good idea. The last sentence of the abstract now reads:
+       We base this rule of thumb on Auger-Meitner decay widths
+of Sr$4p^{-1}$ and Ra$6p^{-1}$
+obtained by relativistic FanoADC-Stieltjes calculations 
+\textcolor{blue}
+{and validate it against
+Auger-Meitner decay widths from the literature.}
+ \item \emph{Page 3: ``One is KNOWN in the literature...'' } \newline
+       Corrected.
+ \item \emph{Page 5, top: ``... NOBLE gas atoms ...''} \newline
+       Corrected.
+ \addtocounter{enumi}{1}
+ \item 
+       \emph{Page 5, ``Moreover, in the single-particle
+       picture...'' - this requires a detailed explanation with the exact specification
+       of the CK process that is possible for one of the states (e.g. L2), why is
+       it forbidden in the single-particle picture, why it starts being energetically
+       allowed in the full picture only for high enough Z, etc. Otherwise nothing
+       is clear.} \newline
+       This remark in its context refers to the Auger-Meitner process from the
+       $(n-1)p$ orbitals of the earth alkaline elements only. In order to clarify this
+       point, the sentence now reads:
+       Moreover, in the single particle picture, a Coster-Kronig decay is possible for neither
+\textcolor{red}{of the initial states}
+\textcolor{blue}
+{of the earth alkaline elements}
+and thus the pure Auger-Meitner process, where the initial
+states have an equal number of possible decay channels, can be observed.
+ \item \emph{Fig. 1 (Sr) - why is there no similar plot for Ra?
+             That would be very instructive, for example in view of the discussion
+             of the pole strengths.} \newline
+             I would like to thank the reviewer for this comment.
+             The information this plot illustrates for Sr is that the an Auger
+             decay is energetically allowed and that there is only one
+             energetically accessible final state. As the reviewer points out,
+             it also illustrates relative pole strengths of the initial states, which
+             are given in Table I.
+             I chose Sr instead of Ra, because
+             the channel opening for $s^{-2}$ final states is more likely to be closed
+             in the lighter homologues. If the decay channel is open for the light
+             homologue, it is also open for the heavier homologue.\\
+             With respect to the pole strengths, the required information is the
+             manifold of numbers presented in Table I and the new Table III, illustrated
+             in Figure 5 and their
+             discussions, required for the later analysis.
+             The illustration in Figure 5 is more detailed than the ionization
+             spectra can be and I have therefore chosen not to include the
+             ionization spectra additionally.
+ \item \emph{``spin-free" - this is misleading, because spin is taken into account
+             (antisymmetry), it is its coupling with the orbital angular momentum that
+             is missing.} \newline
+             I see, why the reviewer finds the term misleading,
+             it is however the
+             usual terminology (see Reference 25).
+ \item \emph{``ps'' looks like a picosecond. PS?} \newline
+             I would like to thank the reviewer for this comment. Another
+             common notation of the pole strength is $P$
+             (see e.g. J. Chem. Phys. 152, 024125 (2020)). I have chosen this
+             notation instead.
+ \item \emph{Table I: 3/2, 3/2 and 3/2, 1/2 projections: real part of the energy of
+             these degenerate projections is the same, but why imaginary part is
+             different - is that an indication of the level of numerical accuracy?
+             This must be discussed, as degenerate levels have the same
+             (here - complex) energy... } \newline
+       I would like to thank the reviewer for this interesting comment. This deviation
+       might be used as an indication for numerical accuracy. In this case it would
+       result in a numerical error of \unit[2.5]{\%} for strontium
+       and \unit[3.0]{\%}
+       However, since this observation is not based on physical
+       reasoning but only on two numerical data points, I will only indicate that
+       this assignment may give an idea about the numerical error and leave the prove
+       to future studies to be based on a robust data set.
+ \item \emph{Page 9, bottom: The radial density seems to follow the ``general''
+             trend in one out of two considered cases - how general is indeed that
+             trend then? Or I completely misunderstand what is written... } \newline
+             This change of the radial densities is general.
+             The difference of the radial expectation value for $Z$ between
+             1 and 118 according to Burke
+             (Ref. 46) is shown for all orbitals occuring in this paper in the
+             following figure:\\
+             \includegraphics[width=0.7\textwidth]{../pics/comp_exp_r.pdf}\\
+             In order to clarify, I have added the corresponding References 45 and 46
+             and added the explanation on pages 9 and 10.
+             
+ \item \emph{Page 12 top: ``The analysis of that ... that they are the only other
+             contributions ...'' - I do not understand the logical connection.
+             The second leading contribution can be at the level of 10\% with
+             hundreds of sub-\% other contributions affecting the spread of the
+             wavefunction significantly because they involve Rydberg orbitals. }
+             \newline
+             I would like to thank the reviewer for this comment. She/he
+             correctly pointed out that the Rydberg configurations do have a
+             significant contribution in the eigenvectors. I have therefore
+             included the new Table III, where I present the detailed
+             eigenvector analysis. I have furthermore included it in the
+             discussion of the decay width results on pages 12 and 13.
+             The full analysis does
+             not change the main argumentation and results of this manuscript.
+ \item \emph{Page 12, bottom: why does not CK process play a role in this rule?
+             the explanation is clearly related to (5) above... } \newline
+             This is a good question. Unfortunately, the data does
+             not support such a simple rule of thumb
+             for the CK processes.
+ \item \emph{Page 14, top - how well does it hold? What is the mean value and the
+             standard deviation of the ration of the two widths over the sample of
+             considered elements and shells?} \newline
+             This is an interesting question. Connected to it is, which quantity
+             is suited for its determination. My rule of thumb includes which
+             decay width is larger than the other but not their ratios. I would
+             expect that the ratios are the same, because
+             many different factors like the element's
+             position in the periodic table and, related to it, its electronic 
+             structure will influence them. In order to illustrate it,
+             I have gathered the means and standard deviations for the three
+             different classes in the following table, where
+             $\alpha = \frac{\Gamma_{l+1/2}}{\Gamma_{l-1/2}}$.
+\begin{center}
+\begin{tabular}{lrr}
+\toprule
+     & $\overline{\alpha} [\unit{eV}]$ & $\sigma [\unit{eV}]$ \\
+\midrule
+ $L_{2,3}$ & 1.234  & 0.192 \\
+ $M_{2,3}$ & 1.653  & 0.808 \\
+ $M_{4,5}$ & 1.095  & 0.037 \\
+\bottomrule
+\end{tabular}
+\end{center}
+             All means are larger than 1, which can be expected, since the rule
+             of thumb holds for all but one of the data points available in the
+             literature. For $L_{2,3}$ and $M_{4,5}$, all data points within the standard
+             deviation are larger than 1. For $M_{2,3}$ however, the standard deviation
+             stretches to values smaller than 1. This is caused by the data point of
+             one element (Yb), where the ratio is much larger than in all other cases.\\
+             This opens up a the new question, which effect the electronic structure
+             plays with respect to the ratios. But since this is not the question raised
+             in this manuscript, I will refer to future research. I therefore refer
+             to the comparison of the absolute data points, which are included in
+             Tables IV-VI and have not included the means and standard deviations
+             in the manuscript.
+ \item \emph{Page 14, ``However, ...'' - one decay channel LESS than ...} \newline
+             Corrected.
+ \item \emph{Page 14, ``However....'' - which clear trend (as a function of Z) is expected?
+             Connected to (13).} \newline
+             I would like to thank the reviewer for this comment. To specifically
+             address the expected and actual trends, I have extended the explanation
+             on pages 9--10 as well as 14.
+\end{enumerate}
+
+
+
+        \closing{Sincerely yours,}
+	\end{letter}
+
+\end{document}
