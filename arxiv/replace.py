@@ -16,7 +16,7 @@ count = 0
 rootdir = os.getcwd()
 #outfile = open('','w')
 
-for filename in glob.glob("*.tex"):
+for filename in glob.glob("master.tex"):
 #for filename in glob.glob("schale08.tex"):
    print filename
    infile = open(filename, 'r')
